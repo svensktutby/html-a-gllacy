@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="no-js">
+<input class="promo-slider__toggle" id="promo-slider-toggle-1" type="radio" name="promo-slider-toggle" checked>
+<input class="promo-slider__toggle" id="promo-slider-toggle-2" type="radio" name="promo-slider-toggle">
+<input class="promo-slider__toggle" id="promo-slider-toggle-3" type="radio" name="promo-slider-toggle">
 <!-- Page wrapper -->
 <div class="page-wrapper">
   <div class="container">
@@ -129,7 +132,31 @@
     
     <!-- Page content -->
     <main class="page-content">
-      
+      <div class="container">
+        <!-- Promo slider -->
+        <section class="promo-slider">
+          <div class="promo-slider__inner">
+            <div class="promo-slider__slide">
+              <h2 class="promo-slider__title">Крем-брюле и пломбир с малиновым джемом</h2>
+              <a class="btn btn--promo-slider" href="#">Давайте оба!</a>
+            </div>
+            <div class="promo-slider__slide">
+              <h2 class="promo-slider__title">Шоколадный пломбир и лимонный сорбет </h2>
+              <a class="btn btn--promo-slider" href="#">Давайте оба!</a>
+            </div>
+            <div class="promo-slider__slide">
+              <h2 class="promo-slider__title">Пломбир с помадкой и клубничный щербет</h2>
+              <a class="btn btn--promo-slider" href="#">Давайте оба!</a>
+            </div>
+          </div>
+          <div class="promo-slider__controls">
+            <label class="promo-slider__control" for="promo-slider-toggle-1"></label>
+            <label class="promo-slider__control" for="promo-slider-toggle-2"></label>
+            <label class="promo-slider__control" for="promo-slider-toggle-3"></label>
+          </div>
+        </section>
+        <!-- End Promo slider -->
+      </div>
     </main>
     <!-- End Page content -->
   </div>
