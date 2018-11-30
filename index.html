@@ -14,7 +14,116 @@
   <div class="container">
     <!-- Header -->
     <header class="page-header">
-      
+      <div class="page-header__col">
+        <!-- Main navigation -->
+        <nav class="main-nav">
+          <!-- Logo -->
+          <div class="logo">
+            <a class="logo__link">
+              <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Gllacy">
+            </a>
+          </div>
+          <!-- End Logo -->
+          <!-- Navigatiion list -->
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--has-child">
+              <a class="main-nav__link" href="catalog.html">Каталог</a>
+              <div class="main-nav__sublist-wrapper main-nav__sublist-wrapper--lvl-2">
+                <ul class="main-nav__list main-nav__list--lvl-2">
+                  <li class="main-nav__title main-nav__title--lvl-2">Новинки</li>
+                  <li class="main-nav__item main-nav__item--lvl-2">
+                    <a class="main-nav__link main-nav__link--lvl-2" href="#">Сливочное</a>
+                  </li>
+                  <li class="main-nav__item main-nav__item--lvl-2">
+                    <a class="main-nav__link main-nav__link--lvl-2" href="#">Щербеты</a>
+                  </li>
+                  <li class="main-nav__item main-nav__item--lvl-2">
+                    <a class="main-nav__link main-nav__link--lvl-2" href="#">Фруктовый лёд</a>
+                  </li>
+                  <li class="main-nav__item main-nav__item--lvl-2">
+                    <a class="main-nav__link main-nav__link--lvl-2" href="#">Мелорин</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Доставка и оплата</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">О компании</a>
+            </li>
+          </ul>
+          <!-- End Navigatiion list -->
+        </nav>
+        <!-- End Main navigation -->
+      </div>
+
+      <div class="page-header__col">
+        <!-- User block -->
+        <div class="user-block">
+          <!-- Search -->
+          <div class="user-block__item">
+            <a class="user-block__link user-block__link--search" href="#">
+              <svg class="page-header-icon icon" width="17" height="17">
+                <use xlink:href="#icon-search"/>
+              </svg>Поиск
+            </a>
+            <div class="user-block__popup">
+              <form class="user-block__form" id="form-search" action="#" method="get">
+                <div class="user-block__field">
+                  <input class="user-block__input" type="text" name="search" placeholder="Что ищем?">
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- End Search -->
+          <!-- Login -->
+          <div class="user-block__item">
+            <a class="user-block__link user-block__link--login" href="#">
+              <svg class="page-header-icon icon" width="21" height="19">
+                <use xlink:href="#icon-login"/>
+              </svg>Вход
+            </a>
+            <div class="user-block__popup">
+              <form class="user-block__form" id="form-login" action="#" method="post">
+                <div class="user-block__field">
+                  <input class="user-block__input" type="email" name="email" placeholder="Электронная почта">
+                  <input class="user-block__input" type="password" name="password" placeholder="Пароль">
+                </div>
+                <div class="user-block__field field-login">
+                  <div class="field-login__col">
+                    <button class="btn btn--login" type="submit">Войти</button>
+                  </div>
+                  <div class="field-login__col">
+                    <a class="field-login__link" href="#">Забыли пароль?</a>
+                    <a class="field-login__link" href="#">Новая регистрация</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- End Login -->
+          <!-- Cart -->
+          <div class="user-block__item">
+            <a class="user-block__link user-block__link--cart" href="#">
+              <svg class="page-header-icon icon" width="21" height="20">
+                <use xlink:href="#icon-cart"/>
+              </svg>Пусто
+            </a>
+            <!-- <div class="user-block__popup">
+              
+            </div> -->
+          </div>
+          <!-- End Cart -->
+        </div>
+        <!-- End User block -->
+        <!-- Schedule -->
+          <div class="schedule">
+            <p class="schedule__time">С 10 до 20, ежедневно</p>
+            <p class="schedule__phone">8 812 450-25-25</p>
+          </div>
+        <!-- End Schedule -->
+      </div>
     </header>
     <!-- End Header -->
     
