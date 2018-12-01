@@ -90,7 +90,7 @@
             <div class="user-block__popup">
               <form class="user-block__form" id="form-login" action="#" method="post">
                 <div class="user-block__field">
-                  <input class="user-block__input" type="email" name="email" placeholder="Электронная почта">
+                  <input class="user-block__input" type="email" name="email-login" placeholder="Электронная почта">
                   <input class="user-block__input" type="password" name="password" placeholder="Пароль">
                 </div>
                 <div class="user-block__field field-login">
@@ -306,7 +306,7 @@
             <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
             <form class="subscribe__form" id="form-subscribe" action="#" method="post">
               <div class="subscribe__field">
-                <input class="subscribe__input" type="email" name="subscribe" placeholder="Электронная почта">
+                <input class="subscribe__input" type="email" name="email-subscribe" placeholder="Электронная почта">
                 <button class="btn btn--subscribe" type="submit">Отправить</button>
               </div>
             </form>
@@ -315,8 +315,31 @@
       </section>
       <!-- End Blog post and subscribe -->
     </div>
-    <!-- Map -->
-    <!-- End Map -->
+    <!-- Contacts -->
+    <section class="contacts">
+      <h2 class="visually-hidden">Контакты</h2>
+      <div class="contacts__img">
+        <img src="img/map.jpg" width="1200" height="430" alt="Адрес главного офиса и офлайн-магазина по улице Большая Конюшенная 19/8 в городе Санкт-Петербург">
+      </div>
+      <div class="container">
+        <div class="contacts__data">
+          <p class="contacts__text">
+            Адрес главного офиса
+            и офлайн-магазина:
+            <br>
+            <b class="contacts__address">ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+            <br>
+            Для заказов по телефону:
+            <br>
+            <b class="contacts__phone">8 812 450-25-25</b>
+            <br>
+            (с 10 до 20 ежедневно)
+          </p>
+          <a class="btn btn--contacts" id="btn-feedback" href="feedback.html">Форма обратной связи</a>
+        </div>
+      </div>
+    </section>
+    <!-- End Contacts -->
   </main>
   <!-- End Page content -->
 </div>
@@ -332,9 +355,29 @@
   </div>
 </div>
 
-<script src="./js/script.js"></script>
-</body>
-</html>
+<!-- Modal feedback -->
+  <div class="modal-feedback">
+    <button class="modal-feedback__close modal-close"></button>
+    <p class="modal-feedback__caption">Мы обязательно вам ответим!</p>
+    <form class="modal-feedback__form" id="form-feedback" action="#" method="post">
+      <div class="modal-feedback__field">
+        <input class="modal-feedback__input" id="user-name-feedback" type="text" name="user-name-feedback" placeholder="Как вас зовут?">
+        <label class="modal-feedback__label" for="user-name-feedback">Как вас зовут?</label>
+      </div>
+      <div class="modal-feedback__field">
+        <input class="modal-feedback__input" id="email-feedback" type="email" name="email-feedback" placeholder="Ваша почта для ответа?">
+        <label class="modal-feedback__label" for="email-feedback">Ваша почта для ответа?</label>
+      </div>
+      <div class="modal-feedback__field">
+        <textarea class="modal-feedback__text" id="message-feedback" name="message-feedback" placeholder="Напишите что-нибудь..."></textarea>
+        <label class="modal-feedback__label" for="message-feedback">Напишите что-нибудь...</label>
+      </div>
+      <div class="modal-feedback__field">
+        <button class="btn btn--feedback" type="submit">Отправить</button>
+      </div>
+    </form>
+  </div>
+<!-- End Modal feedback -->
 
 <!-- SVG-sprite -->
 <svg style="display: none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -511,3 +554,8 @@
       c0.917,0.182,1.642,0.559,2.179,1.13c0.537,0.571,0.807,1.325,0.807,2.261C23.013,19.392,22.875,19.997,22.602,20.531z"/>
   </symbol>
 </svg>
+<!-- End SVG-sprite -->
+<script src="./js/script.js"></script>
+</body>
+</html>
+
