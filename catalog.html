@@ -4,14 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Глэйси</title>
+  <title>Глэйси каталог</title>
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="no-js">
-<input class="promo-slider__toggle" id="promo-slider-toggle-1" type="radio" name="promo-slider-toggle" checked>
-<input class="promo-slider__toggle" id="promo-slider-toggle-2" type="radio" name="promo-slider-toggle">
-<input class="promo-slider__toggle" id="promo-slider-toggle-3" type="radio" name="promo-slider-toggle">
 <!-- Page wrapper -->
 <div class="page-wrapper">
   <!-- Header -->
@@ -22,14 +19,14 @@
         <nav class="main-nav">
           <!-- Logo -->
           <div class="logo">
-            <a class="logo__link">
+            <a class="logo__link" href="index.html">
               <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Gllacy">
             </a>
           </div>
           <!-- End Logo -->
           <!-- Navigatiion list -->
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--has-child">
+            <li class="main-nav__item main-nav__item--current main-nav__item--has-child">
               <a class="main-nav__link link link--main" href="catalog.html">Каталог</a>
               <div class="main-nav__sublist-wrapper main-nav__sublist-wrapper--lvl-2">
                 <ul class="main-nav__list main-nav__list--lvl-2">
@@ -132,58 +129,40 @@
   <!-- End Header -->
     
   <!-- Page content -->
-  <main class="page-content">
+  <main class="page-content catalog">
     <div class="container">
-      <!-- Promo slider -->
-      <section class="promo-slider">
-        <h2 class="visually-hidden">Промо акции</h2>
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+        <ul class="breadcrumbs__list" aria-label="Breadcrumb" role="navigation">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link link" href="index.html">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link link" href="#">Каталог</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link link">Сливочное</a>
+          </li>
+        </ul>
+      </div>
+      <!-- End Breadcrumbs -->
+      <h1 class="catalog__title">Сливочное мороженое</h1>
 
-        <div class="promo-slider__inner">
-          <div class="promo-slider__slide">
-            <h3 class="promo-slider__title">Крем-брюле и пломбир с малиновым джемом</h3>
-            <a class="btn btn--promo-slider" href="#">Давайте оба!</a>
-          </div>
+      <!-- Filters -->
+      <section class="catalog__filters filters">
+        <h2 class="visually-hidden">Фильтр по сливочному мороженому</h2>
 
-          <div class="promo-slider__slide">
-            <h3 class="promo-slider__title">Шоколадный пломбир и лимонный сорбет </h3>
-            <a class="btn btn--promo-slider" href="#">Давайте оба!</a>
-          </div>
+        <form class="filters__form" id="form-filters" action="#" method="get">
 
-          <div class="promo-slider__slide">
-            <h3 class="promo-slider__title">Пломбир с помадкой и клубничный щербет</h3>
-            <a class="btn btn--promo-slider" href="#">Давайте оба!</a>
-          </div>
-        </div>
-        <div class="promo-slider__controls">
-          <label class="promo-slider__control" for="promo-slider-toggle-1"></label>
-          <label class="promo-slider__control" for="promo-slider-toggle-2"></label>
-          <label class="promo-slider__control" for="promo-slider-toggle-3"></label>
-        </div>
+        </form>
       </section>
-      <!-- End Promo slider -->
-      <!-- Promo cards -->
-      <section class="promo-cards">
-        <h2 class="visually-hidden">Промо акции</h2>
-  
-        <div class="promo-cards__item promo-cards__item--raspberry">
-          <h3 class="promo-cards__title">Малинка даром!</h3>
-          <p class="promo-cards__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <a class="btn btn--promo-cards" href="#">Хочу варенье!</a>
-        </div>
-  
-        <div class="promo-cards__item promo-cards__item--chocolate">
-          <h3 class="promo-cards__title">Шоколадки даром!</h3>
-          <p class="promo-cards__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <a class="btn btn--promo-cards" href="#">Хочу шоколадки!</a>
-        </div>
-      </section>
-      <!-- End Promo cards -->
-      <!-- Promo hits -->
-      <section class="promo-hits">
-        <h2 class="visually-hidden">Наши лучшие предложения</h2>
-  
-        <div class="promo-hits__list">
-          <div class="promo-hits__item product-item product-item--hit">
+      <!-- End Filters -->
+      <!-- Products -->
+      <section class="catalog__products">
+        <h2 class="visually-hidden">Найденная продукция по сливочному мороженому</h2>
+
+        <div class="catalog__list">
+          <div class="catalog__item product-item">
             <div class="product-item__inner">
               <div class="product-item__img-wrap">
                 <img src="img/img-procuct-01.jpg" width="267" height="267" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой">
@@ -200,8 +179,8 @@
                 <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
             </div>
           </div>
-  
-          <div class="promo-hits__item product-item product-item--hit">
+
+          <div class="catalog__item product-item">
             <div class="product-item__inner">
               <div class="product-item__img-wrap">
                 <img src="img/img-procuct-02.jpg" width="267" height="267" alt="Сливочно-кофейное мороженое с кусочками шоколада">
@@ -218,8 +197,8 @@
                 <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
             </div>
           </div>
-  
-          <div class="promo-hits__item product-item product-item--hit">
+          
+          <div class="catalog__item product-item">
             <div class="product-item__inner">
               <div class="product-item__img-wrap">
                 <img src="img/img-procuct-03.jpg" width="267" height="267" alt="Сливочно-клубничное мороженое с присыпкой из белого шоколада">
@@ -233,11 +212,11 @@
               <a class="product-item__link link link--main" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
             </h2>
             <div class="product-item__show-btn-wrapper">
-                <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+              <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
             </div>
           </div>
-  
-          <div class="promo-hits__item product-item product-item--hit">
+          
+          <div class="catalog__item product-item">
             <div class="product-item__inner">
               <div class="product-item__img-wrap">
                 <img src="img/img-procuct-04.jpg" width="267" height="267" alt="Сливочное мороженое крем-брюле с карамельной подливкой">
@@ -251,95 +230,157 @@
               <a class="product-item__link link link--main" href="#">Сливочное крем-брюле с карамельной подливкой</a>
             </h2>
             <div class="product-item__show-btn-wrapper">
+              <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            </div>
+          </div>
+          
+          <div class="catalog__item product-item">
+            <div class="product-item__inner">
+              <div class="product-item__img-wrap">
+                <img src="img/img-procuct-05.jpg" width="267" height="267" alt="Сливочное мороженое с брусничным джемом">
+              </div>
+              <div class="product-item__price">
+                <span class="product-item__cost">325&#8381;</span>
+                <span class="product-item__measure">/кг</span>
+              </div>
+            </div>
+            <h2 class="product-item__title">
+              <a class="product-item__link link link--main" href="#">Сливочное с брусничным джемом</a>
+            </h2>
+            <div class="product-item__show-btn-wrapper">
+                <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            </div>
+          </div>
+
+          <div class="catalog__item product-item">
+            <div class="product-item__inner">
+              <div class="product-item__img-wrap">
+                <img src="img/img-procuct-06.jpg" width="267" height="267" alt="Сливочно-черничное мороженое с цельными ягодами черники">
+              </div>
+              <div class="product-item__price">
+                <span class="product-item__cost">410&#8381;</span>
+                <span class="product-item__measure">/кг</span>
+              </div>
+            </div>
+            <h2 class="product-item__title">
+              <a class="product-item__link link link--main" href="#">Сливочно-черничное с цельными ягодами черники</a>
+            </h2>
+            <div class="product-item__show-btn-wrapper">
+                <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            </div>
+          </div>
+
+          <div class="catalog__item product-item">
+            <div class="product-item__inner">
+              <div class="product-item__img-wrap">
+                <img src="img/img-procuct-07.jpg" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
+              </div>
+              <div class="product-item__price">
+                <span class="product-item__cost">375&#8381;</span>
+                <span class="product-item__measure">/кг</span>
+              </div>
+            </div>
+            <h2 class="product-item__title">
+              <a class="product-item__link link link--main" href="#">Сливочно-лимонное мороженое с карамельной присыпкой</a>
+            </h2>
+            <div class="product-item__show-btn-wrapper">
+                <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            </div>
+          </div>
+
+          <div class="catalog__item product-item">
+            <div class="product-item__inner">
+              <div class="product-item__img-wrap">
+                <img src="img/img-procuct-08.jpg" width="267" height="267" alt="Сливочное мороженое с шоколадной стружкой">
+              </div>
+              <div class="product-item__price">
+                <span class="product-item__cost">320&#8381;</span>
+                <span class="product-item__measure">/кг</span>
+              </div>
+            </div>
+            <h2 class="product-item__title">
+              <a class="product-item__link link link--main" href="#">Сливочное с шоколадной стружкой</a>
+            </h2>
+            <div class="product-item__show-btn-wrapper">
+                <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            </div>
+          </div>
+
+          <div class="catalog__item product-item">
+            <div class="product-item__inner">
+              <div class="product-item__img-wrap">
+                <img src="img/img-procuct-09.jpg" width="267" height="267" alt="Сливочно-ванильное мороженое с кусочками шоколада">
+              </div>
+              <div class="product-item__price">
+                <span class="product-item__cost">440&#8381;</span>
+                <span class="product-item__measure">/кг</span>
+              </div>
+            </div>
+            <h2 class="product-item__title">
+              <a class="product-item__link link link--main" href="#">Сливочно-ванильное с кусочками шоколада</a>
+            </h2>
+            <div class="product-item__show-btn-wrapper">
+                <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            </div>
+          </div>
+
+          <div class="catalog__item product-item">
+            <div class="product-item__inner">
+              <div class="product-item__img-wrap">
+                <img src="img/img-procuct-10.jpg" width="267" height="267" alt="Сливочноe мороженое с ментоловым сиропом">
+              </div>
+              <div class="product-item__price">
+                <span class="product-item__cost">435&#8381;</span>
+                <span class="product-item__measure">/кг</span>
+              </div>
+            </div>
+            <h2 class="product-item__title">
+              <a class="product-item__link link link--main" href="#">Сливочноe с ментоловым сиропом</a>
+            </h2>
+            <div class="product-item__show-btn-wrapper">
+                <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            </div>
+          </div>
+
+          <div class="catalog__item product-item">
+            <div class="product-item__inner">
+              <div class="product-item__img-wrap">
+                <img src="img/img-procuct-11.jpg" width="267" height="267" alt="Сливочное мороженое с кусочками черного шоколада">
+              </div>
+              <div class="product-item__price">
+                <span class="product-item__cost">355&#8381;</span>
+                <span class="product-item__measure">/кг</span>
+              </div>
+            </div>
+            <h2 class="product-item__title">
+              <a class="product-item__link link link--main" href="#">Сливочное с кусочками черного шоколада</a>
+            </h2>
+            <div class="product-item__show-btn-wrapper">
+                <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            </div>
+          </div>
+
+          <div class="catalog__item product-item">
+            <div class="product-item__inner">
+              <div class="product-item__img-wrap">
+                <img src="img/img-procuct-12.jpg" width="267" height="267" alt="Сливочное мороженое с мятным сиропом">
+              </div>
+              <div class="product-item__price">
+                <span class="product-item__cost">420&#8381;</span>
+                <span class="product-item__measure">/кг</span>
+              </div>
+            </div>
+            <h2 class="product-item__title">
+              <a class="product-item__link link link--main" href="#">Сливочное с мятным сиропом</a>
+            </h2>
+            <div class="product-item__show-btn-wrapper">
                 <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
             </div>
           </div>
         </div>
       </section>
-      <!-- End Promo hits -->
-      <!-- Shop features -->
-      <section class="shop-features">
-        <h1 class="shop-features__title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h1>
-  
-        <div class="shop-features__item">
-          <svg class="shop-features__icon icon" width="49" height="49">
-            <use xlink:href="#icon-ice-cream"/>
-          </svg>
-          <p class="shop-features__text">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-        </div>
-  
-        <div class="shop-features__item">
-          <svg class="shop-features__icon icon" width="49" height="49">
-            <use xlink:href="#icon-cow"/>
-          </svg>
-          <p class="shop-features__text">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-        </div>
-  
-        <div class="shop-features__item">
-          <svg class="shop-features__icon icon" width="49" height="49">
-            <use xlink:href="#icon-leaf"/>
-          </svg>
-          <p class="shop-features__text">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
-        </div>
-  
-        <div class="shop-features__item">
-          <svg class="shop-features__icon icon" width="49" height="49">
-            <use xlink:href="#icon-term"/>
-          </svg>
-          <p class="shop-features__text">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
-        </div>
-      </section>
-      <!-- End Shop features -->
-      <!-- Blog post and subscribe -->
-      <section class="blog-post-subscribe">
-        <h2 class="visually-hidden">Последние новости и подписка на блог</h2>
-  
-        <div class="blog-post-subscribe__item blog-post">
-          <p class="blog-post__caption">Новое в нашем блоге</p>
-          <h3 class="blog-post__title">
-            <a class="blog-post__link link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
-          </h3>
-        </div>
-  
-        <div class="blog-post-subscribe__item subscribe">
-          <div class="subscribe__inner">
-            <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-            <form class="subscribe__form" id="form-subscribe" action="#" method="post">
-              <div class="subscribe__field">
-                <input class="subscribe__input" type="email" name="email-subscribe" placeholder="Электронная почта">
-                <button class="btn btn--subscribe" type="submit">Отправить</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-      <!-- End Blog post and subscribe -->
+      <!-- End Products -->
     </div>
-    <!-- Contacts -->
-    <section class="contacts">
-      <h2 class="visually-hidden">Контакты</h2>
-      <div class="contacts__img">
-        <img src="img/map.jpg" width="1200" height="430" alt="Адрес главного офиса и офлайн-магазина по улице Большая Конюшенная 19/8 в городе Санкт-Петербург">
-      </div>
-      <div class="container">
-        <div class="contacts__data">
-          <p class="contacts__text">
-            Адрес главного офиса
-            и офлайн-магазина:
-            <br>
-            <b class="contacts__address">ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
-            <br>
-            Для заказов по телефону:
-            <br>
-            <b class="contacts__phone">8 812 450-25-25</b>
-            <br>
-            (с 10 до 20 ежедневно)
-          </p>
-          <a class="btn btn--contacts" id="btn-feedback" href="feedback.html">Форма обратной связи</a>
-        </div>
-      </div>
-    </section>
-    <!-- End Contacts -->
   </main>
   <!-- End Page content -->
 </div>

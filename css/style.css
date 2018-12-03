@@ -42,7 +42,7 @@ body {
 body {
   font-weight: 400; /* !needs change */
   font-size: 16px; /* !needs change */
-  line-height: 1.42; /* !needs change (1.42 default - from Bootstrap)*/
+  line-height: 1.375; /* !needs change (1.42 default - from Bootstrap)*/
   font-family: "Roboto", "Arial", sans-serif; /* !needs change */
   color: #fff; /* !needs change */
 
@@ -66,13 +66,17 @@ p {
   margin: 0;
 }
 
-a {
+.link {
   color: #fff; /* !needs change */
 }
 
-a,
-a:hover {
-  text-decoration: none;
+.link--main:hover,
+.link--main:focus {
+  color: #ffbc9e;
+}
+
+.icon {
+  fill: currentColor;
 }
 
 /* класс для визуального скрытия элементов, кототые должны остаться на странице для семантики */
@@ -122,10 +126,6 @@ a:hover {
   max-width: 1150px;
   margin: 0 auto;
   padding: 0 25px;
-}
-
-.icon {
-  fill: currentColor;
 }
 
 /* ============================================
