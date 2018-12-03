@@ -71,12 +71,14 @@
                 <use xlink:href="#icon-search"/>
               </svg>Поиск
             </a>
-            <div class="user-block__popup">
-              <form class="user-block__form" id="form-search" action="#" method="get">
-                <div class="user-block__field">
-                  <input class="user-block__input" type="text" name="search" placeholder="Что ищем?">
-                </div>
-              </form>
+            <div class="user-block__popup search">
+              <div class="search__form-wrapper">
+                <form class="search__form" id="form-search" action="#" method="get">
+                  <div class="search__field">
+                    <input class="search__input" type="text" name="search" placeholder="Что ищем?">
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
           <!-- End Search -->
@@ -87,22 +89,24 @@
                 <use xlink:href="#icon-login"/>
               </svg>Вход
             </a>
-            <div class="user-block__popup">
-              <form class="user-block__form" id="form-login" action="#" method="post">
-                <div class="user-block__field">
-                  <input class="user-block__input" type="email" name="email-login" placeholder="Электронная почта">
-                  <input class="user-block__input" type="password" name="password" placeholder="Пароль">
-                </div>
-                <div class="user-block__field field-login">
-                  <div class="field-login__col">
-                    <button class="btn btn--login" type="submit">Войти</button>
+            <div class="user-block__popup login">
+              <div class="login__form-wrapper">
+                <form class="login__form" id="form-login" action="#" method="post">
+                  <div class="login__field">
+                    <input class="login__input" type="email" name="email-login" placeholder="Электронная почта">
+                    <input class="login__input" type="password" name="password" placeholder="Пароль">
                   </div>
-                  <div class="field-login__col">
-                    <a class="field-login__link link" href="#">Забыли пароль?</a>
-                    <a class="field-login__link link" href="#">Новая регистрация</a>
+                  <div class="login__field field-login">
+                    <div class="field-login__col">
+                      <button class="btn btn--login" type="submit">Войти</button>
+                    </div>
+                    <div class="field-login__col">
+                      <a class="field-login__link link" href="#">Забыли пароль?</a>
+                      <a class="field-login__link link" href="#">Новая регистрация</a>
+                    </div>
                   </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
           <!-- End Login -->
@@ -113,8 +117,10 @@
                 <use xlink:href="#icon-cart"/>
               </svg>Пусто
             </a>
-            <!-- <div class="user-block__popup">
-              
+            <!-- <div class="user-block__popup cart">
+              <div class="cart__table-wrapper">
+                
+              </div>
             </div> -->
           </div>
           <!-- End Cart -->

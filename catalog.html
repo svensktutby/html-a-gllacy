@@ -68,12 +68,14 @@
                 <use xlink:href="#icon-search"/>
               </svg>Поиск
             </a>
-            <div class="user-block__popup">
-              <form class="user-block__form" id="form-search" action="#" method="get">
-                <div class="user-block__field">
-                  <input class="user-block__input" type="text" name="search" placeholder="Что ищем?">
-                </div>
-              </form>
+            <div class="user-block__popup search">
+              <div class="search__form-wrapper">
+                <form class="search__form" id="form-search" action="#" method="get">
+                  <div class="search__field">
+                    <input class="search__input" type="text" name="search" placeholder="Что ищем?">
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
           <!-- End Search -->
@@ -84,22 +86,24 @@
                 <use xlink:href="#icon-login"/>
               </svg>Вход
             </a>
-            <div class="user-block__popup">
-              <form class="user-block__form" id="form-login" action="#" method="post">
-                <div class="user-block__field">
-                  <input class="user-block__input" type="email" name="email-login" placeholder="Электронная почта">
-                  <input class="user-block__input" type="password" name="password" placeholder="Пароль">
-                </div>
-                <div class="user-block__field field-login">
-                  <div class="field-login__col">
-                    <button class="btn btn--login" type="submit">Войти</button>
+            <div class="user-block__popup login">
+              <div class="login__form-wrapper">
+                <form class="login__form" id="form-login" action="#" method="post">
+                  <div class="login__field">
+                    <input class="login__input" type="email" name="email-login" placeholder="Электронная почта">
+                    <input class="login__input" type="password" name="password" placeholder="Пароль">
                   </div>
-                  <div class="field-login__col">
-                    <a class="field-login__link link" href="#">Забыли пароль?</a>
-                    <a class="field-login__link link" href="#">Новая регистрация</a>
+                  <div class="login__field field-login">
+                    <div class="field-login__col">
+                      <button class="btn btn--login" type="submit">Войти</button>
+                    </div>
+                    <div class="field-login__col">
+                      <a class="field-login__link link" href="#">Забыли пароль?</a>
+                      <a class="field-login__link link" href="#">Новая регистрация</a>
+                    </div>
                   </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
           <!-- End Login -->
@@ -110,9 +114,42 @@
                 <use xlink:href="#icon-cart"/>
               </svg>Пусто
             </a>
-            <!-- <div class="user-block__popup">
-              
-            </div> -->
+            <div class="user-block__popup cart">
+              <div class="cart__table-wrapper">
+                <table class="cart__table table-cart">
+                  <tbody>
+                    <tr class="table-cart__row">
+                      <td class="table-cart__col table-cart__col--remove">
+                        <button type="button">Удалить из корзины</button>
+                      </td>
+                      <td class="table-cart__col table-cart__col--img">
+                        <img src="img/img-procuct-01.jpg" width="33" height="33" alt="Фото мороженого">
+                      </td>
+                      <td class="table-cart__col table-cart__col--descr">Пломбир с апельсиновым джемом</td>
+                      <td class="table-cart__col table-cart__col--price">1,5 кг х <span>200 руб.</span></td>
+                      <td class="table-cart__col table-cart__col--count">300 руб.</td>
+                    </tr>
+                    <tr class="table-cart__row">
+                      <td class="table-cart__col table-cart__col--remove">
+                        <button type="button">Удалить из корзины</button>
+                      </td>
+                      <td class="table-cart__col table-cart__col--img">
+                        <img src="img/img-procuct-01.jpg" width="33" height="33" alt="Фото мороженого">
+                      </td>
+                      <td class="table-cart__col table-cart__col--descr">Клубничный пломбир с присыпкой из белого шоколада</td>
+                      <td class="table-cart__col table-cart__col--price">1,5 кг х <span>300 руб.</span></td>
+                      <td class="table-cart__col table-cart__col--count">450 руб.</td>
+                    </tr>
+                    <tr class="table-cart__row">
+                      <td class="table-cart__col table-cart__col--total" colspan="5">Итого: 750 руб.</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="cart__order">
+                  <button class="btn btn--order" type="button">Оформить заказ</button>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- End Cart -->
         </div>
@@ -152,9 +189,76 @@
       <section class="catalog__filters filters">
         <h2 class="visually-hidden">Фильтр по сливочному мороженому</h2>
 
-        <form class="filters__form" id="form-filters" action="#" method="get">
+        <div class="filters__form-wrapper">
+          <form class="filters__form" id="form-filters" action="#" method="get">
+            <fieldset class="filters__item">
+              <legend class="filters__caption">Сортировка:</legend>
+              <select class="filters__option" name="option-filters" id="option-filters">
+                <option value="popular" selected>по популярности</option>
+                <option value="low-price">сначала недорогие</option>
+                <option value="high-price">сначала дорогие</option>
+                <option value="fat">по жирности</option>
+              </select>
+            </fieldset>
 
-        </form>
+            <fieldset class="filters__item price-filter">
+              <legend class="filters__caption">Цена: 100 руб. – 500 руб.</legend>
+              <div class="price-filter__scale">
+                <div class="price-filter__range-bar">
+                  <div class="price-filter__toggle price-filter__toggle--min"></div>
+                  <div class="price-filter__toggle price-filter__toggle--max"></div>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="filters__item fat-filter">
+              <legend class="filters__caption">Жирность:</legend>
+              <label>
+                <input class="fat-filter__input" type="radio" name="fat" value="0">
+                <span class="fat-filter__indicator">0%</span>
+              </label>
+              <label>
+                <input class="fat-filter__input" type="radio" name="fat" value="under10" checked disabled>
+                <span class="fat-filter__indicator">до 10%</span>
+              </label>
+              <label>
+                <input class="fat-filter__input" type="radio" name="fat" value="under30">
+                <span class="fat-filter__indicator">до 30%</span>
+              </label>
+              <label>
+                <input class="fat-filter__input" type="radio" name="fat" value="over30">
+                <span class="fat-filter__indicator">выше 30%</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="filters__item fillers-filter">
+              <legend class="filters__caption">Наполнители:</legend>
+              <label>
+                <input class="fillers-filter__input" type="checkbox" name="chocolate" checked>
+                <span class="fillers-filter__indicator">шоколадные</span>
+              </label>
+              <label>
+                <input class="fillers-filter__input" type="checkbox" name="sugar" checked>
+                <span class="fillers-filter__indicator">сахарные присыпки</span>
+              </label>
+              <label>
+                <input class="fillers-filter__input" type="checkbox" name="fruit">
+                <span class="fillers-filter__indicator">фрукты</span>
+              </label>
+              <label>
+                <input class="fillers-filter__input" type="checkbox" name="syrup">
+                <span class="fillers-filter__indicator">сиропы</span>
+              </label>
+              <label>
+                <input class="fillers-filter__input" type="checkbox" name="jam">
+                <span class="fillers-filter__indicator">джемы</span>
+              </label>
+            </fieldset>
+            <div class="filters__btn-wrapper">
+              <button class="filters__btn" type="submit">Применить</button>
+            </div>
+          </form>
+        </div>
       </section>
       <!-- End Filters -->
       <!-- Products -->
@@ -380,6 +484,17 @@
         </div>
       </section>
       <!-- End Products -->
+      <!-- Pagination -->
+        <div class="pagination" aria-label="Page navigation">
+          <a class="pagination__dir pagination__dir--disabled" href="#" aria-label="Previous">&lt;</a>
+          <a class="pagination__item pagination__item--current">1</a>
+          <a class="pagination__item" href="#">2</a>
+          <a class="pagination__item" href="#">3</a>
+          <a class="pagination__item" href="#">4</a>
+          <a class="pagination__item" href="#">5</a>
+          <a class="pagination__dir" href="#" aria-label="Next">&gt;</a>
+        </div>
+      <!-- End Pagination -->
     </div>
   </main>
   <!-- End Page content -->
