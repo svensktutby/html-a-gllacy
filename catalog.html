@@ -173,13 +173,13 @@
       <div class="breadcrumbs">
         <ul class="breadcrumbs__list" aria-label="Breadcrumb" role="navigation">
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link link" href="index.html">Главная</a>
+            <a class="breadcrumbs__link link link--main" href="index.html">Главная</a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link link" href="#">Каталог</a>
+            <a class="breadcrumbs__link link link--main" href="#">Каталог</a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link link">Сливочное</a>
+            <a class="breadcrumbs__link breadcrumbs__link--current link link--main">Сливочное</a>
           </li>
         </ul>
       </div>
@@ -194,66 +194,74 @@
           <form class="filters__form" id="form-filters" action="#" method="get">
             <fieldset class="filters__item">
               <legend class="filters__caption">Сортировка:</legend>
-              <select class="filters__option" name="option-filters" id="option-filters">
-                <option value="popular" selected>по популярности</option>
-                <option value="low-price">сначала недорогие</option>
-                <option value="high-price">сначала дорогие</option>
-                <option value="fat">по жирности</option>
-              </select>
+              <div class="filters__field">
+                <select class="filters__select" name="select-filters" id="select-filters">
+                  <option value="popular" selected>по популярности</option>
+                  <option value="low-price">сначала недорогие</option>
+                  <option value="high-price">сначала дорогие</option>
+                  <option value="fat">по жирности</option>
+                </select>
+              </div>
             </fieldset>
 
             <fieldset class="filters__item price-filter">
               <legend class="filters__caption">Цена: 100 руб. – 500 руб.</legend>
-              <div class="price-filter__scale">
-                <div class="price-filter__range-bar">
-                  <div class="price-filter__toggle price-filter__toggle--min"></div>
-                  <div class="price-filter__toggle price-filter__toggle--max"></div>
+              <div class="filters__field">
+                <div class="price-filter__scale">
+                  <div class="price-filter__range-bar">
+                    <div class="price-filter__toggle price-filter__toggle--min"></div>
+                    <div class="price-filter__toggle price-filter__toggle--max"></div>
+                  </div>
                 </div>
               </div>
             </fieldset>
 
             <fieldset class="filters__item fat-filter">
               <legend class="filters__caption">Жирность:</legend>
-              <label>
-                <input class="fat-filter__input" type="radio" name="fat" value="0">
-                <span class="fat-filter__indicator">0%</span>
-              </label>
-              <label>
-                <input class="fat-filter__input" type="radio" name="fat" value="under10" checked disabled>
-                <span class="fat-filter__indicator">до 10%</span>
-              </label>
-              <label>
-                <input class="fat-filter__input" type="radio" name="fat" value="under30">
-                <span class="fat-filter__indicator">до 30%</span>
-              </label>
-              <label>
-                <input class="fat-filter__input" type="radio" name="fat" value="over30">
-                <span class="fat-filter__indicator">выше 30%</span>
-              </label>
+              <div class="filters__field">
+                <label class="filters__label">
+                  <input class="fat-filter__input" type="radio" name="fat" value="0">
+                  <span class="fat-filter__indicator">0%</span>
+                </label>
+                <label class="filters__label">
+                  <input class="fat-filter__input" type="radio" name="fat" value="under10" checked disabled>
+                  <span class="fat-filter__indicator">до 10%</span>
+                </label>
+                <label class="filters__label">
+                  <input class="fat-filter__input" type="radio" name="fat" value="under30">
+                  <span class="fat-filter__indicator">до 30%</span>
+                </label>
+                <label class="filters__label">
+                  <input class="fat-filter__input" type="radio" name="fat" value="over30">
+                  <span class="fat-filter__indicator">выше 30%</span>
+                </label>
+              </div>
             </fieldset>
 
             <fieldset class="filters__item fillers-filter">
               <legend class="filters__caption">Наполнители:</legend>
-              <label>
-                <input class="fillers-filter__input" type="checkbox" name="chocolate" checked>
-                <span class="fillers-filter__indicator">шоколадные</span>
-              </label>
-              <label>
-                <input class="fillers-filter__input" type="checkbox" name="sugar" checked>
-                <span class="fillers-filter__indicator">сахарные присыпки</span>
-              </label>
-              <label>
-                <input class="fillers-filter__input" type="checkbox" name="fruit">
-                <span class="fillers-filter__indicator">фрукты</span>
-              </label>
-              <label>
-                <input class="fillers-filter__input" type="checkbox" name="syrup">
-                <span class="fillers-filter__indicator">сиропы</span>
-              </label>
-              <label>
-                <input class="fillers-filter__input" type="checkbox" name="jam">
-                <span class="fillers-filter__indicator">джемы</span>
-              </label>
+              <div class="filters__field">
+                <label class="filters__label">
+                  <input class="fillers-filter__input" type="checkbox" name="chocolate" checked>
+                  <span class="fillers-filter__indicator">шоколадные</span>
+                </label>
+                <label class="filters__label">
+                  <input class="fillers-filter__input" type="checkbox" name="sugar" checked>
+                  <span class="fillers-filter__indicator">сахарные присыпки</span>
+                </label>
+                <label class="filters__label">
+                  <input class="fillers-filter__input" type="checkbox" name="fruit">
+                  <span class="fillers-filter__indicator">фрукты</span>
+                </label>
+                <label class="filters__label">
+                  <input class="fillers-filter__input" type="checkbox" name="syrup">
+                  <span class="fillers-filter__indicator">сиропы</span>
+                </label>
+                <label class="filters__label">
+                  <input class="fillers-filter__input" type="checkbox" name="jam">
+                  <span class="fillers-filter__indicator">джемы</span>
+                </label>
+              </div>
             </fieldset>
             <div class="filters__btn-wrapper">
               <button class="filters__btn" type="submit">Применить</button>
@@ -270,7 +278,7 @@
           <div class="catalog__item product-item">
             <div class="product-item__inner">
               <div class="product-item__img-wrap">
-                <img src="img/img-procuct-01.jpg" width="267" height="267" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой">
+                <img class="product-item__img" src="img/img-procuct-01.jpg" width="267" height="267" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой">
               </div>
               <div class="product-item__price">
                 <span class="product-item__cost">310&#8381;</span>
@@ -288,7 +296,7 @@
           <div class="catalog__item product-item">
             <div class="product-item__inner">
               <div class="product-item__img-wrap">
-                <img src="img/img-procuct-02.jpg" width="267" height="267" alt="Сливочно-кофейное мороженое с кусочками шоколада">
+                <img class="product-item__img" src="img/img-procuct-02.jpg" width="267" height="267" alt="Сливочно-кофейное мороженое с кусочками шоколада">
               </div>
               <div class="product-item__price">
                 <span class="product-item__cost">380&#8381;</span>
@@ -306,7 +314,7 @@
           <div class="catalog__item product-item">
             <div class="product-item__inner">
               <div class="product-item__img-wrap">
-                <img src="img/img-procuct-03.jpg" width="267" height="267" alt="Сливочно-клубничное мороженое с присыпкой из белого шоколада">
+                <img class="product-item__img" src="img/img-procuct-03.jpg" width="267" height="267" alt="Сливочно-клубничное мороженое с присыпкой из белого шоколада">
               </div>
               <div class="product-item__price">
                 <span class="product-item__cost">355&#8381;</span>
@@ -324,7 +332,7 @@
           <div class="catalog__item product-item">
             <div class="product-item__inner">
               <div class="product-item__img-wrap">
-                <img src="img/img-procuct-04.jpg" width="267" height="267" alt="Сливочное мороженое крем-брюле с карамельной подливкой">
+                <img class="product-item__img" src="img/img-procuct-04.jpg" width="267" height="267" alt="Сливочное мороженое крем-брюле с карамельной подливкой">
               </div>
               <div class="product-item__price">
                 <span class="product-item__cost">415&#8381;</span>
@@ -342,7 +350,7 @@
           <div class="catalog__item product-item">
             <div class="product-item__inner">
               <div class="product-item__img-wrap">
-                <img src="img/img-procuct-05.jpg" width="267" height="267" alt="Сливочное мороженое с брусничным джемом">
+                <img class="product-item__img" src="img/img-procuct-05.jpg" width="267" height="267" alt="Сливочное мороженое с брусничным джемом">
               </div>
               <div class="product-item__price">
                 <span class="product-item__cost">325&#8381;</span>
@@ -360,7 +368,7 @@
           <div class="catalog__item product-item">
             <div class="product-item__inner">
               <div class="product-item__img-wrap">
-                <img src="img/img-procuct-06.jpg" width="267" height="267" alt="Сливочно-черничное мороженое с цельными ягодами черники">
+                <img class="product-item__img" src="img/img-procuct-06.jpg" width="267" height="267" alt="Сливочно-черничное мороженое с цельными ягодами черники">
               </div>
               <div class="product-item__price">
                 <span class="product-item__cost">410&#8381;</span>
@@ -378,7 +386,7 @@
           <div class="catalog__item product-item">
             <div class="product-item__inner">
               <div class="product-item__img-wrap">
-                <img src="img/img-procuct-07.jpg" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
+                <img class="product-item__img" src="img/img-procuct-07.jpg" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
               </div>
               <div class="product-item__price">
                 <span class="product-item__cost">375&#8381;</span>
@@ -396,7 +404,7 @@
           <div class="catalog__item product-item">
             <div class="product-item__inner">
               <div class="product-item__img-wrap">
-                <img src="img/img-procuct-08.jpg" width="267" height="267" alt="Сливочное мороженое с шоколадной стружкой">
+                <img class="product-item__img" src="img/img-procuct-08.jpg" width="267" height="267" alt="Сливочное мороженое с шоколадной стружкой">
               </div>
               <div class="product-item__price">
                 <span class="product-item__cost">320&#8381;</span>
@@ -414,7 +422,7 @@
           <div class="catalog__item product-item">
             <div class="product-item__inner">
               <div class="product-item__img-wrap">
-                <img src="img/img-procuct-09.jpg" width="267" height="267" alt="Сливочно-ванильное мороженое с кусочками шоколада">
+                <img class="product-item__img" src="img/img-procuct-09.jpg" width="267" height="267" alt="Сливочно-ванильное мороженое с кусочками шоколада">
               </div>
               <div class="product-item__price">
                 <span class="product-item__cost">440&#8381;</span>
@@ -432,7 +440,7 @@
           <div class="catalog__item product-item">
             <div class="product-item__inner">
               <div class="product-item__img-wrap">
-                <img src="img/img-procuct-10.jpg" width="267" height="267" alt="Сливочноe мороженое с ментоловым сиропом">
+                <img class="product-item__img" src="img/img-procuct-10.jpg" width="267" height="267" alt="Сливочноe мороженое с ментоловым сиропом">
               </div>
               <div class="product-item__price">
                 <span class="product-item__cost">435&#8381;</span>
@@ -450,7 +458,7 @@
           <div class="catalog__item product-item">
             <div class="product-item__inner">
               <div class="product-item__img-wrap">
-                <img src="img/img-procuct-11.jpg" width="267" height="267" alt="Сливочное мороженое с кусочками черного шоколада">
+                <img class="product-item__img" src="img/img-procuct-11.jpg" width="267" height="267" alt="Сливочное мороженое с кусочками черного шоколада">
               </div>
               <div class="product-item__price">
                 <span class="product-item__cost">355&#8381;</span>
@@ -468,7 +476,7 @@
           <div class="catalog__item product-item">
             <div class="product-item__inner">
               <div class="product-item__img-wrap">
-                <img src="img/img-procuct-12.jpg" width="267" height="267" alt="Сливочное мороженое с мятным сиропом">
+                <img class="product-item__img" src="img/img-procuct-12.jpg" width="267" height="267" alt="Сливочное мороженое с мятным сиропом">
               </div>
               <div class="product-item__price">
                 <span class="product-item__cost">420&#8381;</span>
@@ -487,8 +495,8 @@
       <!-- End Products -->
       <!-- Pagination -->
         <ul class="pagination" aria-label="Page navigation">
-          <li class="pagination__item">
-            <a class="pagination__link pagination__link--prev" href="#" aria-label="Предыдущая">&lt;</a>
+          <li class="pagination__item pagination__item--disabled">
+            <a class="pagination__link pagination__link--dir" href="#" aria-label="Предыдущая">&lt;</a>
           </li>
           <li class="pagination__item pagination__item--current">
             <a class="pagination__link">1</a>
@@ -506,7 +514,7 @@
             <a class="pagination__link" href="#">5</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link pagination__link--next" href="#" aria-label="Следующая">&gt;</a>
+            <a class="pagination__link pagination__link--dir" href="#" aria-label="Следующая">&gt;</a>
           </li>
         </ul>
       <!-- End Pagination -->

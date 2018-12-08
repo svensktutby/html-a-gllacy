@@ -1,10 +1,6 @@
-/* ============================================
-    FONTS
-   ============================================ */
+/*=============== FONTS ===============*/
 
-/* ============================================
-    BASE STYLES
-   ============================================ */
+/*=============== BASE STYLES ===============*/
 html,
 body {
   height: 100%;
@@ -13,6 +9,8 @@ body {
 }
 
 body {
+  min-width: 900px;
+
   font-weight: 400; /* !needs change */
   font-size: 16px; /* !needs change */
   line-height: 1.375; /* !needs change (1.42 default - from Bootstrap)*/
@@ -23,12 +21,21 @@ body {
 }
 
 .link {
+  line-height: 1.125;
   color: #fff; /* !needs change */
+  text-decoration: none;
+}
+
+.link--main {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .link--main:hover,
-.link--main:focus {
+.link--main:focus,
+.link--main:active {
   color: #ffbc9e;
+
+  border-bottom-color: #ffbc9e;
 }
 
 .icon {
@@ -36,10 +43,34 @@ body {
 }
 
 .btn {
+  display: inline-block;
+  padding: 10px 20px;
+
   font: inherit; /* потому что <button> и <input> по умолчанию не наследует шрифты */
-  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.33333;
   vertical-align: middle;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+
+  background-image: linear-gradient( 90deg, #f26843 0%, #e74b36 100%);
   border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 2px 0 rgb(172, 16, 0, 0.64);
+}
+
+.btn:hover {
+  background-image: linear-gradient( 90deg, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px 0 #ac1000;
+}
+
+.btn:active {
+  color: #fceeec;
+
+  background-image: linear-gradient( 90deg, #d74632 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px 0 #942718;
 }
 
 /* класс для визуального скрытия элементов, кототые должны остаться на странице для семантики */
@@ -70,8 +101,7 @@ body {
   clear: both;
 }
 
-/* Layout
-   ============================================ */
+/**************** Layout ***************/
 .page-wrapper {
   min-height: 100%; /* для прибивания footer к низу страницы */
 }
@@ -85,28 +115,387 @@ body {
 
 /* class for centering page content */
 .container {
-  width: 100%;
-  max-width: 1150px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 25px;
+  padding: 0 2.5%;
 }
 
-/* ============================================
-    HEADER
-   ============================================ */
+/*=============== HEADER ===============*/
+/**************** Main navigation ***************/
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+/**************** User block ***************/
+/**************** Schedule ***************/
+.schedule {
+  text-align: right;
+}
+
+.schedule__time {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 1.14285;
+}
+
+.schedule__phone {
+  margin: 0;
+  padding: 0;
+
+  font-size: 22px;
+  line-height: 1.0909;
+}
+
+/*=============== PAGE CONTENT ===============*/
+
+/**************** Promo slider ***************/
+.promo-slider__slide {
+  max-width: 670px;
+
+  text-align: center;
+}
+.promo-slider__title {
+  font-size: 60px;
+}
+
+.btn--promo-slider {
+  padding: 10px 35px;
+
+  font-size: 32px;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+}
+/**************** Promo slider ***************/
+
+/**************** Promo cards ***************/
+.promo-cards__title {
+  font-size: 35px;
+  line-height: 1.17142;
+}
+
+.promo-cards__text {
+  font-size: 18px;
+  line-height: 1.2222;
+}
+
+/**************** Promo hits ***************/
+.product-item__img-wrap {
+  width: 267px;
+  height: 267px;
+  overflow: hidden;
+
+  border-radius: 50%;
+}
+
+.product-item__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.product-item__cost {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1;
+  text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.product-item__measure {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.5;
+  text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.product-item__link {
+  font-weight: 500;
+}
+/**************** Shop features ***************/
+.shop-features {
+  color: #323232;
+}
+
+.shop-features__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.25;
+}
+/**************** Blog post and subscribe ***************/
+.blog-post {
+  line-height: 1.25;
+  color: #323232;
+}
+
+.blog-post__link {
+  font-weight: 700;
+  font-size: 24px;
+  color: #323232;
+  text-decoration: underline;
+}
+
+.subscribe {
+  color: #5a5a5a;
+}
+
+.subscribe__text {
+  line-height: 1.25;
+}
+/**************** Contacts ***************/
+.contacts__data {
+  width: 255px;
+  padding: 15px 25px;
+
+  color: #323232;
+
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.contacts__text {
+  margin-bottom: 25px;
+
+  font-size: 18px;
+  line-height: 1.42857;
+}
+
+.contacts__address {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 15px;
+
+  font-size: 18px;
+  line-height: 1.33333;
+}
+
+.contacts__phone {
+  display: inline-block;
+  margin-top: 10px;
+
+  font-size: 18px;
+  line-height: 1.22222;
+}
+
+.contacts__text {
+  font-size: 14px;
+  line-height: 1.42857;
+}
+
+.btn--contacts {
+  display: block;
+}
+
+/*=============== CATALOG ===============*/
+.catalog__title {
+  font-size: 35px;
+  line-height: 1.17142;
+}
+/**************** Breadcrumbs ***************/
+.breadcrumbs__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.breadcrumbs__item {
+  display: inline-block;
+}
+
+.breadcrumbs__link {
+  font-size: 14px;
+  line-height: 1.142857;
+}
+
+.breadcrumbs__link--current {
+  border-bottom: none;
+}
+
+.breadcrumbs__link--current:hover,
+.breadcrumbs__link--current:focus {
+  color: #fff;
+}
+/**************** Filters ***************/
+.filters__item {
+  border: none;
+}
+
+.filters__caption {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.142857;
+}
+
+.filters__field {
+  padding: 7px 25px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+.filters__label {
+  font-weight: 500;
+  line-height: 1.125;
+}
+
+.filters__btn {
+  padding: 7px 25px;
+
+  font-weight: 500;
+  line-height: 1.125;
+  color: #fff;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid #fff;
+  border-radius: 20px;
+}
+
+.filters__btn:hover {
+  color: #323232;
+
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.filters__btn:active {
+  padding: 9px 27px;
+
+  background-color: rgb(237, 237, 237);
+  border: none;
+  box-shadow: inset 0 2px 1px 0 #696969;
+}
+
+/**************** Products ***************/
+/**************** Pagination ***************/
+.pagination {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.pagination__item {
+  display: inline-block;
+
+  text-align: center;
+}
+
+.pagination__link {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+
+  line-height: 25px;
+  vertical-align: middle;
+  color: #fff;
+  text-decoration: none;
+
+  border-radius: 50%;
+}
+
+.pagination__link:last-child {
+  margin-right: 0;
+}
+
+.pagination__link:not(.pagination__link--dir):hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.pagination__link:not(.pagination__link--dir):active {
+  color: #000;
+
+  background-color: #fff;
+}
+
+.pagination__item--disabled .pagination__link {
+  color: rgba(255, 255, 255, 0.2);
+
+  cursor: default;
+}
+
+.pagination__item--current .pagination__link {
+  color: #000;
+
+  background-color: #fff;
+  cursor: default;
+}
+
+.pagination__item--current .pagination__link:hover {
+  background-color: #fff;
+}
 
 
-/* ============================================
-    MAIN CONTENT
-   ============================================ */
 
+.pagination__link--dir {
+  padding-bottom: 2px;
+}
+/*=============== FOOTER ===============*/
 
-/* About
-   ============================================ */
+/**************** Social ***************/
+.social__list {
+  margin: 0;
+  padding: 0;
 
-/* ============================================
-    MEDIA QUERIES
-   ============================================ */
+  list-style: none;
+}
+
+.social__item {
+  display: inline-block;
+}
+
+.social__link {
+  font-size: 0;
+}
+
+.social__icon {
+  display: block;
+
+  border: 2px solid #c2cec7;
+  border-radius: 50%;
+
+  fill: #e6ebe9;
+}
+
+.social__link:hover .social__icon {
+  fill: #fff;
+}
+
+.social__link:active .social__icon {
+  border-color: #dae2de;
+
+  fill: #e9e9e9;
+}
+
+/**************** Extra navigation ***************/
+.extra-nav__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.extra-nav__item {
+  display: inline-block;
+}
+
+.extra-nav__item--suppliers {
+  font-weight: bold;
+}
+
+.extra-nav__link {
+  font-size: 13px;
+  line-height: 1.3846;
+}
+/**************** Copyright ***************/
+.copyright__text {
+  font-size: 12px;
+  line-height: 1.5;
+}
+/*=============== MEDIA QUERIES ===============*/
 @media screen and (max-width: 1200px) {
 }
 
