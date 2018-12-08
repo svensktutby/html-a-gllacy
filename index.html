@@ -18,121 +18,123 @@
   <!-- Header -->
   <header class="page-header">
     <div class="container">
-      <div class="page-header__col">
-        <!-- Main navigation -->
-        <nav class="main-nav">
-          <!-- Logo -->
-          <div class="logo">
-            <a class="logo__link">
-              <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Gllacy">
-            </a>
-          </div>
-          <!-- End Logo -->
-          <!-- Navigatiion list -->
-          <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--has-child">
-              <a class="main-nav__link link link--main" href="catalog.html">Каталог</a>
-              <div class="main-nav__sublist-wrapper main-nav__sublist-wrapper--lvl-2">
-                <ul class="main-nav__list main-nav__list--lvl-2">
-                  <li class="main-nav__title main-nav__title--lvl-2">Новинки</li>
-                  <li class="main-nav__item main-nav__item--lvl-2">
-                    <a class="main-nav__link main-nav__link--lvl-2 link" href="#">Сливочное</a>
-                  </li>
-                  <li class="main-nav__item main-nav__item--lvl-2">
-                    <a class="main-nav__link main-nav__link--lvl-2 link" href="#">Щербеты</a>
-                  </li>
-                  <li class="main-nav__item main-nav__item--lvl-2">
-                    <a class="main-nav__link main-nav__link--lvl-2 link" href="#">Фруктовый лёд</a>
-                  </li>
-                  <li class="main-nav__item main-nav__item--lvl-2">
-                    <a class="main-nav__link main-nav__link--lvl-2 link" href="#">Мелорин</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link link link--main" href="#">Доставка и оплата</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link link link--main" href="#">О компании</a>
-            </li>
-          </ul>
-          <!-- End Navigatiion list -->
-        </nav>
-        <!-- End Main navigation -->
-      </div>
-
-      <div class="page-header__col">
-        <!-- User block -->
-        <div class="user-block">
-          <!-- Search -->
-          <div class="user-block__item">
-            <a class="user-block__link user-block__link--search link" href="#">
-              <svg class="page-header__icon icon" width="17" height="17">
-                <use xlink:href="#icon-search"/>
-              </svg>Поиск
-            </a>
-            <div class="user-block__popup search">
-              <div class="search__form-wrapper">
-                <form class="search__form" id="form-search" action="#" method="get">
-                  <div class="search__field">
-                    <input class="search__input" type="text" name="search" placeholder="Что ищем?">
-                  </div>
-                </form>
+      <div class="page-header__inner">
+        <div class="page-header__col">
+          <!-- Main navigation -->
+          <nav class="main-nav">
+            <!-- Logo -->
+            <div class="logo">
+              <a class="logo__link">
+                <img class="logo__img" src="img/logo.svg" width="154" height="64" alt="Логотип магазина Gllacy">
+              </a>
+            </div>
+            <!-- End Logo -->
+            <!-- Navigatiion list -->
+            <ul class="main-nav__list main-nav__list--lvl-1">
+              <li class="main-nav__item main-nav__item--has-child">
+                <a class="main-nav__link link link--main" href="catalog.html">Каталог</a>
+                <div class="main-nav__sublist-wrapper main-nav__sublist-wrapper--lvl-2">
+                  <ul class="main-nav__list main-nav__list--lvl-2">
+                    <li class="main-nav__title main-nav__title--lvl-2">Новинки</li>
+                    <li class="main-nav__item main-nav__item--lvl-2">
+                      <a class="main-nav__link main-nav__link--lvl-2 link" href="#">Сливочное</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--lvl-2">
+                      <a class="main-nav__link main-nav__link--lvl-2 link" href="#">Щербеты</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--lvl-2">
+                      <a class="main-nav__link main-nav__link--lvl-2 link" href="#">Фруктовый лёд</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--lvl-2">
+                      <a class="main-nav__link main-nav__link--lvl-2 link" href="#">Мелорин</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link link link--main" href="#">Доставка&nbsp;и&nbsp;оплата</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link link link--main" href="#">О&nbsp;компании</a>
+              </li>
+            </ul>
+            <!-- End Navigatiion list -->
+          </nav>
+          <!-- End Main navigation -->
+        </div>
+  
+        <div class="page-header__col">
+          <!-- User block -->
+          <div class="user-block">
+            <!-- Search -->
+            <div class="user-block__item">
+              <a class="user-block__link user-block__link--search link" href="#">
+                <svg class="page-header__icon icon" width="17" height="17">
+                  <use xlink:href="#icon-search"/>
+                </svg>Поиск
+              </a>
+              <div class="user-block__popup search">
+                <div class="search__form-wrapper">
+                  <form class="search__form" id="form-search" action="#" method="get">
+                    <div class="search__field">
+                      <input class="search__input" type="text" name="search" placeholder="Что ищем?">
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- End Search -->
-          <!-- Login -->
-          <div class="user-block__item">
-            <a class="user-block__link user-block__link--login link" href="#">
-              <svg class="page-header__icon icon" width="21" height="19">
-                <use xlink:href="#icon-login"/>
-              </svg>Вход
-            </a>
-            <div class="user-block__popup login">
-              <div class="login__form-wrapper">
-                <form class="login__form" id="form-login" action="#" method="post">
-                  <div class="login__field">
-                    <input class="login__input" type="email" name="email-login" placeholder="Электронная почта">
-                    <input class="login__input" type="password" name="password" placeholder="Пароль">
-                  </div>
-                  <div class="login__field field-login">
-                    <div class="field-login__col">
-                      <button class="btn btn--login" type="submit">Войти</button>
+            <!-- End Search -->
+            <!-- Login -->
+            <div class="user-block__item">
+              <a class="user-block__link user-block__link--login link" href="#">
+                <svg class="page-header__icon icon" width="21" height="19">
+                  <use xlink:href="#icon-login"/>
+                </svg>Вход
+              </a>
+              <div class="user-block__popup login">
+                <div class="login__form-wrapper">
+                  <form class="login__form" id="form-login" action="#" method="post">
+                    <div class="login__field">
+                      <input class="login__input" type="email" name="email-login" placeholder="Электронная почта">
+                      <input class="login__input" type="password" name="password" placeholder="Пароль">
                     </div>
-                    <div class="field-login__col">
-                      <a class="field-login__link link" href="#">Забыли пароль?</a>
-                      <a class="field-login__link link" href="#">Новая регистрация</a>
+                    <div class="login__field field-login">
+                      <div class="field-login__col">
+                        <button class="btn btn--login" type="submit">Войти</button>
+                      </div>
+                      <div class="field-login__col">
+                        <a class="field-login__link link" href="#">Забыли пароль?</a>
+                        <a class="field-login__link link" href="#">Новая регистрация</a>
+                      </div>
                     </div>
-                  </div>
-                </form>
+                  </form>
+                </div>
               </div>
             </div>
+            <!-- End Login -->
+            <!-- Cart -->
+            <div class="user-block__item">
+              <a class="user-block__link user-block__link--cart link" href="#">
+                <svg class="page-header__icon icon" width="21" height="20">
+                  <use xlink:href="#icon-cart"/>
+                </svg>Пусто
+              </a>
+              <!-- <div class="user-block__popup cart">
+                <div class="cart__table-wrapper">
+                  
+                </div>
+              </div> -->
+            </div>
+            <!-- End Cart -->
           </div>
-          <!-- End Login -->
-          <!-- Cart -->
-          <div class="user-block__item">
-            <a class="user-block__link user-block__link--cart link" href="#">
-              <svg class="page-header__icon icon" width="21" height="20">
-                <use xlink:href="#icon-cart"/>
-              </svg>Пусто
-            </a>
-            <!-- <div class="user-block__popup cart">
-              <div class="cart__table-wrapper">
-                
-              </div>
-            </div> -->
+          <!-- End User block -->
+          <!-- Schedule -->
+          <div class="schedule">
+            <p class="schedule__time">С 10 до 20, ежедневно</p>
+            <p class="schedule__phone">8 812 450-25-25</p>
           </div>
-          <!-- End Cart -->
+          <!-- End Schedule -->
         </div>
-        <!-- End User block -->
-        <!-- Schedule -->
-        <div class="schedule">
-          <p class="schedule__time">С 10 до 20, ежедневно</p>
-          <p class="schedule__phone">8 812 450-25-25</p>
-        </div>
-        <!-- End Schedule -->
       </div>
     </div>
   </header>
@@ -142,7 +144,7 @@
   <main class="page-content">
     <div class="container">
       <!-- Promo slider -->
-      <section class="promo-slider">
+      <section class="page-content__section promo-slider">
         <h2 class="visually-hidden">Промо акции</h2>
 
         <div class="promo-slider__inner">
@@ -169,24 +171,28 @@
       </section>
       <!-- End Promo slider -->
       <!-- Promo cards -->
-      <section class="promo-cards">
+      <section class="page-content__section promo-cards">
         <h2 class="visually-hidden">Промо акции</h2>
   
         <div class="promo-cards__item promo-cards__item--raspberry">
           <h3 class="promo-cards__title">Малинка даром!</h3>
           <p class="promo-cards__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <a class="btn btn--promo-cards" href="#">Хочу варенье!</a>
+          <div class="promo-cards__btn-wrapper">
+            <a class="btn promo-cards__btn" href="#">Хочу варенье!</a>
+          </div>
         </div>
   
         <div class="promo-cards__item promo-cards__item--chocolate">
           <h3 class="promo-cards__title">Шоколадки даром!</h3>
           <p class="promo-cards__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <a class="btn btn--promo-cards" href="#">Хочу шоколадки!</a>
+          <div class="promo-cards__btn-wrapper">
+            <a class="btn promo-cards__btn" href="#">Хочу шоколадки!</a>
+          </div>
         </div>
       </section>
       <!-- End Promo cards -->
       <!-- Promo hits -->
-      <section class="promo-hits">
+      <section class="page-content__section promo-hits">
         <h2 class="visually-hidden">Наши лучшие предложения</h2>
   
         <div class="promo-hits__list">
@@ -265,40 +271,42 @@
       </section>
       <!-- End Promo hits -->
       <!-- Shop features -->
-      <section class="shop-features">
+      <section class="page-content__section shop-features">
         <h1 class="shop-features__title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h1>
   
-        <div class="shop-features__item">
-          <svg class="shop-features__icon icon" width="49" height="49">
-            <use xlink:href="#icon-ice-cream"/>
-          </svg>
-          <p class="shop-features__text">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-        </div>
-  
-        <div class="shop-features__item">
-          <svg class="shop-features__icon icon" width="49" height="49">
-            <use xlink:href="#icon-cow"/>
-          </svg>
-          <p class="shop-features__text">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-        </div>
-  
-        <div class="shop-features__item">
-          <svg class="shop-features__icon icon" width="49" height="49">
-            <use xlink:href="#icon-leaf"/>
-          </svg>
-          <p class="shop-features__text">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
-        </div>
-  
-        <div class="shop-features__item">
-          <svg class="shop-features__icon icon" width="49" height="49">
-            <use xlink:href="#icon-term"/>
-          </svg>
-          <p class="shop-features__text">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+        <div class="shop-features__list">
+          <div class="shop-features__item">
+            <svg class="shop-features__icon icon" width="49" height="49">
+              <use xlink:href="#icon-ice-cream"/>
+            </svg>
+            <p class="shop-features__text">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+          </div>
+    
+          <div class="shop-features__item">
+            <svg class="shop-features__icon icon" width="49" height="49">
+              <use xlink:href="#icon-cow"/>
+            </svg>
+            <p class="shop-features__text">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+          </div>
+    
+          <div class="shop-features__item">
+            <svg class="shop-features__icon icon" width="49" height="49">
+              <use xlink:href="#icon-leaf"/>
+            </svg>
+            <p class="shop-features__text">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+          </div>
+    
+          <div class="shop-features__item">
+            <svg class="shop-features__icon icon" width="49" height="49">
+              <use xlink:href="#icon-term"/>
+            </svg>
+            <p class="shop-features__text">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+          </div>
         </div>
       </section>
       <!-- End Shop features -->
       <!-- Blog post and subscribe -->
-      <section class="blog-post-subscribe">
+      <section class="page-content__section blog-post-subscribe">
         <h2 class="visually-hidden">Последние новости и подписка на блог</h2>
   
         <div class="blog-post-subscribe__item blog-post">
@@ -323,12 +331,12 @@
       <!-- End Blog post and subscribe -->
     </div>
     <!-- Contacts -->
-    <section class="contacts">
+    <section class="page-content__section contacts">
       <h2 class="visually-hidden">Контакты</h2>
-      <div class="contacts__img">
-        <img src="img/map.jpg" width="1200" height="430" alt="Адрес главного офиса и офлайн-магазина по улице Большая Конюшенная 19/8 в городе Санкт-Петербург">
+      <div class="contacts__map">
+        <img class="contacts__img" src="img/map.jpg" width="1200" height="430" alt="Адрес главного офиса и офлайн-магазина по улице Большая Конюшенная 19/8 в городе Санкт-Петербург">
       </div>
-      <div class="container">
+      <div class="contacts__data-wrapper">
         <div class="contacts__data">
           <p class="contacts__text">
             Адрес главного офиса
@@ -356,73 +364,75 @@
 <!-- Footer -->
 <footer class="page-footer">
   <div class="container">
-    <!-- Social -->
-    <div class="page-footer__col social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--tw link" href="#" target="blank">
-            <svg class="social__icon icon" width="32" height="32">
-              <use xlink:href="#icon-twitter"/>
-            </svg>Твиттер
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--in link" href="#" target="blank">
-            <svg class="social__icon icon" width="32" height="32">
-              <use xlink:href="#icon-instagram"/>
-            </svg>Инстаграм
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--fb link" href="#" target="blank">
-            <svg class="social__icon icon" width="32" height="32">
-              <use xlink:href="#icon-facebook"/>
-            </svg>Фейсбук
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--vk link" href="#" target="blank">
-            <svg class="social__icon icon" width="32" height="32">
-              <use xlink:href="#icon-vkontakte"/>
-            </svg>Вконтакте
-          </a>
-        </li>
-      </ul>
-    </div>
-    <!-- End Social -->
-    <!-- Extra navigation -->
-    <div class="page-footer__col extra-nav">
-      <ul class="extra-nav__list">
-        <li class="extra-nav__item extra-nav__item--suppliers">
-          <svg class="page-footer__icon icon" width="15" height="13">
-            <use xlink:href="#icon-heart"/>
-          </svg>
-          <a class="extra-nav__link link link--main" href="#">Для поставщиков</a>
-        </li>
-        <li class="extra-nav__item">
-          <a class="extra-nav__link link link--main" href="#">Наши документы</a>
-        </li>
-        <li class="extra-nav__item">
-          <a class="extra-nav__link link link--main" href="#">О производстве</a>
-        </li>
-        <li class="extra-nav__item">
-          <a class="extra-nav__link link link--main" href="#">Экологические стандарты</a>
-        </li>
-      </ul>
-    </div>
-    <!-- End Extra navigation -->
-    <!-- Copyright -->
-    <div class="page-footer__col copyright">
-      <div class="copyright__img-wrapper" href="#" target="blank">
-        <img src="img/logo-htmlacademy.svg" width="108" height="38" alt="Логотип HTML Academy">
+    <div class="page-footer__inner">
+      <!-- Social -->
+      <div class="page-footer__col social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--tw link" href="#" target="blank">
+              <svg class="social__icon icon" width="32" height="32">
+                <use xlink:href="#icon-twitter"/>
+              </svg>Твиттер
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--in link" href="#" target="blank">
+              <svg class="social__icon icon" width="32" height="32">
+                <use xlink:href="#icon-instagram"/>
+              </svg>Инстаграм
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--fb link" href="#" target="blank">
+              <svg class="social__icon icon" width="32" height="32">
+                <use xlink:href="#icon-facebook"/>
+              </svg>Фейсбук
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--vk link" href="#" target="blank">
+              <svg class="social__icon icon" width="32" height="32">
+                <use xlink:href="#icon-vkontakte"/>
+              </svg>Вконтакте
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="copyright__text-wrapper">
-        <p class="copyright__text">
-            Сделано в <a class="copyright__link link link--main" href="https://htmlacademy.ru">HTML Academy</a> &copy; 2018
-        </p>
+      <!-- End Social -->
+      <!-- Extra navigation -->
+      <div class="page-footer__col extra-nav">
+        <ul class="extra-nav__list">
+          <li class="extra-nav__item extra-nav__item--suppliers">
+            <svg class="extra-nav__icon icon" width="15" height="13">
+              <use xlink:href="#icon-heart"/>
+            </svg>
+            <a class="extra-nav__link link link--main" href="#">Для поставщиков</a>
+          </li>
+          <li class="extra-nav__item">
+            <a class="extra-nav__link link link--main" href="#">Наши документы</a>
+          </li>
+          <li class="extra-nav__item">
+            <a class="extra-nav__link link link--main" href="#">О производстве</a>
+          </li>
+          <li class="extra-nav__item">
+            <a class="extra-nav__link link link--main" href="#">Экологические стандарты</a>
+          </li>
+        </ul>
       </div>
+      <!-- End Extra navigation -->
+      <!-- Copyright -->
+      <div class="page-footer__col copyright">
+        <div class="copyright__img-wrapper" href="#" target="blank">
+          <img class="copyright__img" src="img/logo-htmlacademy.svg" width="108" height="38" alt="Логотип HTML Academy">
+        </div>
+        <div class="copyright__text-wrapper">
+          <p class="copyright__text">
+              Сделано в <a class="copyright__link link link--main" href="https://htmlacademy.ru">HTML Academy</a> &copy; 2018
+          </p>
+        </div>
+      </div>
+      <!-- End Copyright -->
     </div>
-    <!-- End Copyright -->
   </div>
 </footer>
 <!-- End Footer -->
