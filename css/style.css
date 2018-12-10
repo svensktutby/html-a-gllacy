@@ -29,7 +29,6 @@ body {
 }
 
 .link--main:hover,
-.link--main:focus,
 .link--main:active {
   color: #ffbc9e;
 
@@ -53,6 +52,7 @@ body {
   color: #fff;
   text-decoration: none;
 
+  background-color: #d07058;
   background-image: linear-gradient( 90deg, #f26843 0%, #e74b36 100%);
   border: none;
   border-radius: 30px;
@@ -138,18 +138,46 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 385px;
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
 
-.main-nav__list--lvl-1 {
-  width: 385px;
+.main-nav__link {
+  display: inline-block;
 }
 
-.main-nav__list--lvl-2 {
+.main-nav__item--current .main-nav__link {
+  padding: 10px 20px;
+  color: #fff;
+  border-bottom: none;
+  border-radius: 30px;
+  background-color: #d07058;
+}
+
+.main-nav__link:hover {
+  padding: 10px 20px;
+  color: #000;
+  border-bottom: none;
+  border-radius: 30px;
+  background-color: #fff;
+}
+
+.main-nav__link:active {
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+}
+
+.main-nav__sub-list {
+  display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  width: 145px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .logo__img {
@@ -416,9 +444,10 @@ body {
   margin-bottom: 0;
 }
 
-.contacts__data-wrapper {
-  margin-right: 2.5%;
-  padding: 0 2.5%;
+.contacts__img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .contacts__data {
@@ -426,6 +455,7 @@ body {
   top: 60px;
   right: 0;
   width: 255px;
+  margin-right: 2.5%;
   padding: 15px 22px 30px;
 
   color: #323232;
@@ -462,12 +492,6 @@ body {
   display: block;
 }
 
-.contacts__img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 /*=============== CATALOG ===============*/
 .catalog__title {
   font-size: 35px;
@@ -494,8 +518,7 @@ body {
   border-bottom: none;
 }
 
-.breadcrumbs__link--current:hover,
-.breadcrumbs__link--current:focus {
+.breadcrumbs__link--current:hover {
   color: #fff;
 }
 /**************** Filters ***************/
@@ -643,7 +666,7 @@ body {
 /**************** Social ***************/
 .social__list {
   margin: 0;
-  padding: 0;
+  padding: 10px 0 0;
 
   list-style: none;
 }
