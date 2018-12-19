@@ -29,12 +29,12 @@
             <!-- Navigatiion list -->
             <ul class="main-nav__list">
               <li class="main-nav__item main-nav__item--current main-nav__item--has-child">
-                <a class="main-nav__link link link--main" href="catalog.html">Каталог</a>
+                <a class="main-nav__link main-nav__link--popup link link--main" href="catalog.html">Каталог</a>
                 <div class="main-nav__sub-list-wrapper">
                   <ul class="main-nav__sub-list">
                     <li class="main-nav__sub-title">Новинки</li>
-                    <li class="main-nav__sub-item">
-                      <a class="main-nav__sub-link link" href="#">Сливочное</a>
+                    <li class="main-nav__sub-item main-nav__sub-item--current">
+                      <a class="main-nav__sub-link link">Сливочное</a>
                     </li>
                     <li class="main-nav__sub-item">
                       <a class="main-nav__sub-link link" href="#">Щербеты</a>
@@ -180,8 +180,8 @@
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link link link--main" href="#">Каталог</a>
           </li>
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link breadcrumbs__link--current link link--main">Сливочное</a>
+          <li class="breadcrumbs__item breadcrumbs__item--current">
+            <a class="breadcrumbs__link link link--main">Сливочное</a>
           </li>
         </ul>
       </div>
@@ -194,23 +194,28 @@
 
         <div class="filters__form-wrapper">
           <form class="filters__form" id="form-filters" action="#" method="get">
-            <fieldset class="filters__item">
+            <fieldset class="filters__item sort-filter">
               <legend class="filters__caption">Сортировка:</legend>
-              <div class="filters__field">
+              <div class="filters__field filters__field--sort-filter">
                 <select class="filters__select" name="select-filters" id="select-filters">
                   <option value="popular" selected>по популярности</option>
                   <option value="low-price">сначала недорогие</option>
                   <option value="high-price">сначала дорогие</option>
                   <option value="fat">по жирности</option>
                 </select>
+                <span class="sort-filter__icon"></span>
               </div>
             </fieldset>
 
             <fieldset class="filters__item price-filter">
-              <legend class="filters__caption">Цена: 100 руб. – 500 руб.</legend>
+              <legend class="filters__caption">Цена:
+                <span class="price-filter__price price-filter__price--min">100</span> руб.&nbsp;–&nbsp;
+                <span class="price-filter__price price-filter__price--max">500</span> руб.
+              </legend>
               <div class="filters__field">
-                <div class="price-filter__scale">
-                  <div class="price-filter__range-bar">
+                <div class="price-filter__range-controls">
+                  <div class="price-filter__range-scale">
+                    <div class="price-filter__range-bar"></div>
                     <div class="price-filter__toggle price-filter__toggle--min"></div>
                     <div class="price-filter__toggle price-filter__toggle--max"></div>
                   </div>
@@ -221,20 +226,20 @@
             <fieldset class="filters__item fat-filter">
               <legend class="filters__caption">Жирность:</legend>
               <div class="filters__field">
-                <label class="filters__label">
-                  <input class="fat-filter__input" type="radio" name="fat" value="0">
+                <input class="fat-filter__input" id="fat-zero" type="radio" name="fat" value="zero">
+                <label class="fat-filter__label" for="fat-zero">
                   <span class="fat-filter__indicator">0%</span>
                 </label>
-                <label class="filters__label">
-                  <input class="fat-filter__input" type="radio" name="fat" value="under10" checked disabled>
+                <input class="fat-filter__input" id="fat-under10" type="radio" name="fat" value="under10" checked disabled>
+                <label class="fat-filter__label" for="fat-under10">
                   <span class="fat-filter__indicator">до 10%</span>
                 </label>
-                <label class="filters__label">
-                  <input class="fat-filter__input" type="radio" name="fat" value="under30">
+                <input class="fat-filter__input" id="fat-under30" type="radio" name="fat" value="under30">
+                <label class="fat-filter__label" for="fat-under30">
                   <span class="fat-filter__indicator">до 30%</span>
                 </label>
-                <label class="filters__label">
-                  <input class="fat-filter__input" type="radio" name="fat" value="over30">
+                <input class="fat-filter__input" id="fat-over30" type="radio" name="fat" value="over30">
+                <label class="fat-filter__label" for="fat-over30">
                   <span class="fat-filter__indicator">выше 30%</span>
                 </label>
               </div>
@@ -243,28 +248,29 @@
             <fieldset class="filters__item fillers-filter">
               <legend class="filters__caption">Наполнители:</legend>
               <div class="filters__field">
-                <label class="filters__label">
-                  <input class="fillers-filter__input" type="checkbox" name="chocolate" checked>
+                <input class="fillers-filter__input" id="fillers-chocolate" type="checkbox" name="chocolate" checked>
+                <label class="fillers-filter__label" for="fillers-chocolate">
                   <span class="fillers-filter__indicator">шоколадные</span>
                 </label>
-                <label class="filters__label">
-                  <input class="fillers-filter__input" type="checkbox" name="sugar" checked>
+                <input class="fillers-filter__input" id="fillers-sugar" type="checkbox" name="sugar" checked>
+                <label class="fillers-filter__label" for="fillers-sugar">
                   <span class="fillers-filter__indicator">сахарные присыпки</span>
                 </label>
-                <label class="filters__label">
-                  <input class="fillers-filter__input" type="checkbox" name="fruit">
+                <input class="fillers-filter__input" id="fillers-fruit" type="checkbox" name="fruit" checked disabled>
+                <label class="fillers-filter__label" for="fillers-fruit">
                   <span class="fillers-filter__indicator">фрукты</span>
                 </label>
-                <label class="filters__label">
-                  <input class="fillers-filter__input" type="checkbox" name="syrup">
+                <input class="fillers-filter__input" id="fillers-syrup" type="checkbox" name="syrup">
+                <label class="fillers-filter__label" for="fillers-syrup">
                   <span class="fillers-filter__indicator">сиропы</span>
                 </label>
-                <label class="filters__label">
-                  <input class="fillers-filter__input" type="checkbox" name="jam">
+                <input class="fillers-filter__input" id="fillers-jam" type="checkbox" name="jam">
+                <label class="fillers-filter__label" for="fillers-jam">
                   <span class="fillers-filter__indicator">джемы</span>
                 </label>
               </div>
             </fieldset>
+            
             <div class="filters__btn-wrapper">
               <button class="filters__btn" type="submit">Применить</button>
             </div>
@@ -537,28 +543,32 @@
             <a class="social__link social__link--tw link" href="#" target="blank">
               <svg class="social__icon icon" width="32" height="32">
                 <use xlink:href="#icon-twitter"/>
-              </svg>Твиттер
+              </svg>
+              <span class="visually-hidden">Твиттер</span>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--in link" href="#" target="blank">
               <svg class="social__icon icon" width="32" height="32">
                 <use xlink:href="#icon-instagram"/>
-              </svg>Инстаграм
+              </svg>
+              <span class="visually-hidden">Инстаграм</span>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--fb link" href="#" target="blank">
               <svg class="social__icon icon" width="32" height="32">
                 <use xlink:href="#icon-facebook"/>
-              </svg>Фейсбук
+              </svg>
+              <span class="visually-hidden">Фейсбук</span>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--vk link" href="#" target="blank">
               <svg class="social__icon icon" width="32" height="32">
                 <use xlink:href="#icon-vkontakte"/>
-              </svg>Вконтакте
+              </svg>
+              <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
         </ul>
