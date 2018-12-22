@@ -10,16 +10,16 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="no-js">
-<input class="promo-slider__toggle" id="promo-slider-toggle-1" type="radio" name="promo-slider-toggle" checked>
-<input class="promo-slider__toggle" id="promo-slider-toggle-2" type="radio" name="promo-slider-toggle">
-<input class="promo-slider__toggle" id="promo-slider-toggle-3" type="radio" name="promo-slider-toggle">
+<input class="promo-slider__toggle" id="promo-slide-1" type="radio" name="promo-slider-toggle" checked>
+<input class="promo-slider__toggle" id="promo-slide-2" type="radio" name="promo-slider-toggle">
+<input class="promo-slider__toggle" id="promo-slide-3" type="radio" name="promo-slider-toggle">
 <!-- Page wrapper -->
-<div class="page-wrapper">
+<div class="page-wrapper page-wrapper--index">
   <!-- Header -->
   <header class="page-header">
     <div class="container">
-      <div class="page-header__inner">
-        <div class="page-header__col">
+      <div class="page-header__row">
+        <div class="page-header__col page-header__col--left">
           <!-- Main navigation -->
           <nav class="main-nav">
             <!-- Logo -->
@@ -63,21 +63,23 @@
           <!-- End Main navigation -->
         </div>
   
-        <div class="page-header__col">
+        <div class="page-header__col page-header__col--right">
           <!-- User block -->
           <div class="user-block">
             <!-- Search -->
-            <div class="user-block__item">
+            <div class="user-block__item search">
               <a class="user-block__link user-block__link--search link" href="#">
-                <svg class="page-header__icon icon" width="17" height="17">
+                <svg class="user-block__icon icon" width="17" height="17">
                   <use xlink:href="#icon-search"/>
-                </svg>Поиск
+                </svg>
+                <span class="user-block__text visually-hidden">Поиск</span>
               </a>
-              <div class="user-block__popup search">
+              <div class="user-block__popup">
                 <div class="search__form-wrapper">
                   <form class="search__form" id="form-search" action="#" method="get">
                     <div class="search__field">
-                      <input class="search__input" type="text" name="search" placeholder="Что ищем?">
+                      <label class="visually-hidden" for="input-search">Что ищем?</label>
+                      <input class="search__input" id="input-search" type="text" name="search" placeholder="Что ищем?">
                     </div>
                   </form>
                 </div>
@@ -85,22 +87,25 @@
             </div>
             <!-- End Search -->
             <!-- Login -->
-            <div class="user-block__item">
+            <div class="user-block__item login">
               <a class="user-block__link user-block__link--login link" href="#">
-                <svg class="page-header__icon icon" width="21" height="19">
+                <svg class="user-block__icon icon" width="21" height="19">
                   <use xlink:href="#icon-login"/>
-                </svg>Вход
+                </svg>
+                <span class="user-block__text">Вход</span>
               </a>
-              <div class="user-block__popup login">
+              <div class="user-block__popup">
                 <div class="login__form-wrapper">
                   <form class="login__form" id="form-login" action="#" method="post">
                     <div class="login__field">
-                      <input class="login__input" type="email" name="email-login" placeholder="Электронная почта">
-                      <input class="login__input" type="password" name="password" placeholder="Пароль">
+                      <label class="visually-hidden" for="email-login">Ваша электронная почта</label>
+                      <input class="login__input" id="email-login" type="email" name="email-login" placeholder="Электронная почта">
+                      <label class="visually-hidden" for="password-login">Ваш пароль</label>
+                      <input class="login__input" id="password-login" type="password" name="password-login" placeholder="Пароль">
                     </div>
                     <div class="login__field field-login">
                       <div class="field-login__col">
-                        <button class="btn btn--login" type="submit">Войти</button>
+                        <button class="btn login__btn" type="submit">Войти</button>
                       </div>
                       <div class="field-login__col">
                         <a class="field-login__link link" href="#">Забыли пароль?</a>
@@ -113,13 +118,14 @@
             </div>
             <!-- End Login -->
             <!-- Cart -->
-            <div class="user-block__item">
+            <div class="user-block__item cart">
               <a class="user-block__link user-block__link--cart link" href="#">
-                <svg class="page-header__icon icon" width="21" height="20">
+                <svg class="user-block__icon icon" width="21" height="20">
                   <use xlink:href="#icon-cart"/>
-                </svg>Пусто
+                </svg>
+                <span class="user-block__text">Пусто</span>
               </a>
-              <!-- <div class="user-block__popup cart">
+              <!-- <div class="user-block__popup">
                 <div class="cart__table-wrapper">
                   
                 </div>
@@ -147,26 +153,26 @@
       <section class="page-content__section promo-slider">
         <h2 class="visually-hidden">Промо акции</h2>
 
-        <div class="promo-slider__inner">
-          <div class="promo-slider__slide">
+        <ul class="promo-slider__list">
+          <li class="promo-slider__item" id="slide-1">
             <h3 class="promo-slider__title">Крем-брюле и пломбир с малиновым джемом</h3>
-            <a class="btn btn--promo-slider" href="#">Давайте оба!</a>
-          </div>
+            <a class="btn promo-slider__btn" href="#">Давайте оба!</a>
+          </li>
 
-          <div class="promo-slider__slide">
+          <li class="promo-slider__item" id="slide-2">
             <h3 class="promo-slider__title">Шоколадный пломбир и лимонный сорбет </h3>
-            <a class="btn btn--promo-slider" href="#">Давайте оба!</a>
-          </div>
+            <a class="btn promo-slider__btn" href="#">Давайте оба!</a>
+          </li>
 
-          <div class="promo-slider__slide">
+          <li class="promo-slider__item" id="slide-3">
             <h3 class="promo-slider__title">Пломбир с помадкой и клубничный щербет</h3>
-            <a class="btn btn--promo-slider" href="#">Давайте оба!</a>
-          </div>
-        </div>
+            <a class="btn promo-slider__btn" href="#">Давайте оба!</a>
+          </li>
+        </ul>
         <div class="promo-slider__controls">
-          <label class="promo-slider__control" for="promo-slider-toggle-1"></label>
-          <label class="promo-slider__control" for="promo-slider-toggle-2"></label>
-          <label class="promo-slider__control" for="promo-slider-toggle-3"></label>
+          <label class="promo-slider__control promo-slider__control--first" for="promo-slide-1">Первый</label>
+          <label class="promo-slider__control promo-slider__control--second" for="promo-slide-2">Второй</label>
+          <label class="promo-slider__control promo-slider__control--third" for="promo-slide-3">Третий</label>
         </div>
       </section>
       <!-- End Promo slider -->
@@ -209,8 +215,8 @@
             <h2 class="product-item__title">
               <a class="product-item__link link link--main" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
             </h2>
-            <div class="product-item__show-btn-wrapper">
-                <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            <div class="product-item__btn-wrapper">
+                <a class="btn product-item__btn" href="#">Быстрый просмотр</a>
             </div>
           </div>
   
@@ -227,8 +233,8 @@
             <h2 class="product-item__title">
               <a class="product-item__link link link--main" href="#">Сливочно-кофейное с кусочками шоколада</a>
             </h2>
-            <div class="product-item__show-btn-wrapper">
-                <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            <div class="product-item__btn-wrapper">
+                <a class="btn product-item__btn" href="#">Быстрый просмотр</a>
             </div>
           </div>
   
@@ -245,8 +251,8 @@
             <h2 class="product-item__title">
               <a class="product-item__link link link--main" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
             </h2>
-            <div class="product-item__show-btn-wrapper">
-                <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            <div class="product-item__btn-wrapper">
+                <a class="btn product-item__btn" href="#">Быстрый просмотр</a>
             </div>
           </div>
   
@@ -263,8 +269,8 @@
             <h2 class="product-item__title">
               <a class="product-item__link link link--main" href="#">Сливочное крем-брюле с карамельной подливкой</a>
             </h2>
-            <div class="product-item__show-btn-wrapper">
-                <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            <div class="product-item__btn-wrapper">
+                <a class="btn product-item__btn" href="#">Быстрый просмотр</a>
             </div>
           </div>
         </div>
@@ -321,8 +327,9 @@
             <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
             <form class="subscribe__form" id="form-subscribe" action="#" method="post">
               <div class="subscribe__field">
-                <input class="subscribe__input" type="email" name="email-subscribe" placeholder="Электронная почта">
-                <button class="btn btn--subscribe" type="submit">Отправить</button>
+                <label class="visually-hidden" for="email-subscribe">Электронная почта</label>
+                <input class="subscribe__input" id="email-subscribe" type="email" name="email-subscribe" placeholder="Электронная почта">
+                <button class="btn subscribe__btn" type="submit">Отправить</button>
               </div>
             </form>
           </div>
@@ -350,7 +357,7 @@
           <br>
           (с 10 до 20 ежедневно)
         </p>
-        <a class="btn btn--contacts" id="btn-feedback" href="feedback.html">Форма обратной связи</a>
+        <a class="btn contacts__btn" id="btn-feedback" href="feedback.html">Форма обратной связи</a>
       </div>
     </section>
     <!-- End Contacts -->
@@ -360,7 +367,7 @@
 <!-- End Page wrapper -->
 
 <!-- Footer -->
-<footer class="page-footer">
+<footer class="page-footer page-footer--index">
   <div class="container">
     <div class="page-footer__inner">
       <!-- Social -->
@@ -440,8 +447,9 @@
 <!-- End Footer -->
 
 <!-- Modal feedback -->
+<div class="modal-overlay"></div>
   <div class="modal-feedback">
-    <button class="modal-feedback__close modal-close"></button>
+    <button class="modal-feedback__close modal-close">Закрыть</button>
     <p class="modal-feedback__caption">Мы обязательно вам ответим!</p>
     <form class="modal-feedback__form" id="form-feedback" action="#" method="post">
       <div class="modal-feedback__field">
@@ -456,8 +464,8 @@
         <textarea class="modal-feedback__text" id="message-feedback" name="message-feedback" placeholder="Напишите что-нибудь..."></textarea>
         <label class="modal-feedback__label" for="message-feedback">Напишите что-нибудь...</label>
       </div>
-      <div class="modal-feedback__field">
-        <button class="btn btn--feedback" type="submit">Отправить</button>
+      <div class="modal-feedback__field modal-feedback__field--btn">
+        <button class="btn modal-feedback__btn" type="submit">Отправить</button>
       </div>
     </form>
   </div>

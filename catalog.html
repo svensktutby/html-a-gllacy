@@ -15,8 +15,8 @@
   <!-- Header -->
   <header class="page-header">
     <div class="container">
-      <div class="page-header__inner">
-        <div class="page-header__col">
+      <div class="page-header__row">
+        <div class="page-header__col page-header__col--left">
           <!-- Main navigation -->
           <nav class="main-nav">
             <!-- Logo -->
@@ -60,21 +60,23 @@
           <!-- End Main navigation -->
         </div>
   
-        <div class="page-header__col">
+        <div class="page-header__col page-header__col--right">
           <!-- User block -->
           <div class="user-block">
             <!-- Search -->
-            <div class="user-block__item">
+            <div class="user-block__item search">
               <a class="user-block__link user-block__link--search link" href="#">
                 <svg class="page-header__icon icon" width="17" height="17">
                   <use xlink:href="#icon-search"/>
-                </svg>Поиск
+                </svg>
+                <span class="user-block__text visually-hidden">Поиск</span>
               </a>
-              <div class="user-block__popup search">
+              <div class="user-block__popup">
                 <div class="search__form-wrapper">
                   <form class="search__form" id="form-search" action="#" method="get">
                     <div class="search__field">
-                      <input class="search__input" type="text" name="search" placeholder="Что ищем?">
+                      <label class="visually-hidden" for="input-search">Что ищем?</label>
+                      <input class="search__input" id="input-search" type="text" name="search" placeholder="Что ищем?">
                     </div>
                   </form>
                 </div>
@@ -82,22 +84,25 @@
             </div>
             <!-- End Search -->
             <!-- Login -->
-            <div class="user-block__item">
+            <div class="user-block__item login">
               <a class="user-block__link user-block__link--login link" href="#">
-                <svg class="page-header__icon icon" width="21" height="19">
+                <svg class="user-block__icon icon" width="21" height="19">
                   <use xlink:href="#icon-login"/>
-                </svg>Вход
+                </svg>
+                <span class="user-block__text">Вход</span>
               </a>
-              <div class="user-block__popup login">
+              <div class="user-block__popup">
                 <div class="login__form-wrapper">
                   <form class="login__form" id="form-login" action="#" method="post">
                     <div class="login__field">
-                      <input class="login__input" type="email" name="email-login" placeholder="Электронная почта">
-                      <input class="login__input" type="password" name="password" placeholder="Пароль">
+                      <label class="visually-hidden" for="email-login">Ваша электронная почта</label>
+                      <input class="login__input" id="email-login" type="email" name="email-login" placeholder="Электронная почта">
+                      <label class="visually-hidden" for="password-login">Ваш пароль</label>
+                      <input class="login__input" id="password-login" type="password" name="password-login" placeholder="Пароль">
                     </div>
                     <div class="login__field field-login">
                       <div class="field-login__col">
-                        <button class="btn btn--login" type="submit">Войти</button>
+                        <button class="btn login__btn" type="submit">Войти</button>
                       </div>
                       <div class="field-login__col">
                         <a class="field-login__link link" href="#">Забыли пароль?</a>
@@ -110,13 +115,14 @@
             </div>
             <!-- End Login -->
             <!-- Cart -->
-            <div class="user-block__item">
+            <div class="user-block__item cart">
               <a class="user-block__link user-block__link--cart link" href="#">
-                <svg class="page-header__icon icon" width="21" height="20">
+                <svg class="user-block__icon icon" width="21" height="20">
                   <use xlink:href="#icon-cart"/>
-                </svg>Пусто
+                </svg>
+                <span class="user-block__text">Пусто</span>
               </a>
-              <div class="user-block__popup cart">
+              <div class="user-block__popup">
                 <div class="cart__table-wrapper">
                   <table class="cart__table table-cart">
                     <tbody>
@@ -147,8 +153,8 @@
                       </tr>
                     </tbody>
                   </table>
-                  <div class="cart__order">
-                    <button class="btn btn--order" type="button">Оформить заказ</button>
+                  <div class="cart__btn-wrapper">
+                    <button class="btn cart__btn" type="button">Оформить заказ</button>
                   </div>
                 </div>
               </div>
@@ -296,8 +302,8 @@
             <h2 class="product-item__title">
               <a class="product-item__link link link--main" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
             </h2>
-            <div class="product-item__show-btn-wrapper">
-                <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            <div class="product-item__btn-wrapper">
+                <a class="btn product-item__btn" href="#">Быстрый просмотр</a>
             </div>
           </div>
 
@@ -314,8 +320,8 @@
             <h2 class="product-item__title">
               <a class="product-item__link link link--main" href="#">Сливочно-кофейное с кусочками шоколада</a>
             </h2>
-            <div class="product-item__show-btn-wrapper">
-                <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            <div class="product-item__btn-wrapper">
+                <a class="btn product-item__btn" href="#">Быстрый просмотр</a>
             </div>
           </div>
           
@@ -332,8 +338,8 @@
             <h2 class="product-item__title">
               <a class="product-item__link link link--main" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
             </h2>
-            <div class="product-item__show-btn-wrapper">
-              <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            <div class="product-item__btn-wrapper">
+              <a class="btn product-item__btn" href="#">Быстрый просмотр</a>
             </div>
           </div>
           
@@ -350,8 +356,8 @@
             <h2 class="product-item__title">
               <a class="product-item__link link link--main" href="#">Сливочное крем-брюле с карамельной подливкой</a>
             </h2>
-            <div class="product-item__show-btn-wrapper">
-              <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            <div class="product-item__btn-wrapper">
+              <a class="btn product-item__btn" href="#">Быстрый просмотр</a>
             </div>
           </div>
           
@@ -368,8 +374,8 @@
             <h2 class="product-item__title">
               <a class="product-item__link link link--main" href="#">Сливочное с брусничным джемом</a>
             </h2>
-            <div class="product-item__show-btn-wrapper">
-                <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            <div class="product-item__btn-wrapper">
+                <a class="btn product-item__btn" href="#">Быстрый просмотр</a>
             </div>
           </div>
 
@@ -386,8 +392,8 @@
             <h2 class="product-item__title">
               <a class="product-item__link link link--main" href="#">Сливочно-черничное с цельными ягодами черники</a>
             </h2>
-            <div class="product-item__show-btn-wrapper">
-                <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            <div class="product-item__btn-wrapper">
+                <a class="btn product-item__btn" href="#">Быстрый просмотр</a>
             </div>
           </div>
 
@@ -404,8 +410,8 @@
             <h2 class="product-item__title">
               <a class="product-item__link link link--main" href="#">Сливочно-лимонное мороженое с карамельной присыпкой</a>
             </h2>
-            <div class="product-item__show-btn-wrapper">
-                <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            <div class="product-item__btn-wrapper">
+                <a class="btn product-item__btn" href="#">Быстрый просмотр</a>
             </div>
           </div>
 
@@ -422,8 +428,8 @@
             <h2 class="product-item__title">
               <a class="product-item__link link link--main" href="#">Сливочное с шоколадной стружкой</a>
             </h2>
-            <div class="product-item__show-btn-wrapper">
-                <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            <div class="product-item__btn-wrapper">
+                <a class="btn product-item__btn" href="#">Быстрый просмотр</a>
             </div>
           </div>
 
@@ -440,8 +446,8 @@
             <h2 class="product-item__title">
               <a class="product-item__link link link--main" href="#">Сливочно-ванильное с кусочками шоколада</a>
             </h2>
-            <div class="product-item__show-btn-wrapper">
-                <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            <div class="product-item__btn-wrapper">
+                <a class="btn product-item__btn" href="#">Быстрый просмотр</a>
             </div>
           </div>
 
@@ -458,8 +464,8 @@
             <h2 class="product-item__title">
               <a class="product-item__link link link--main" href="#">Сливочноe с ментоловым сиропом</a>
             </h2>
-            <div class="product-item__show-btn-wrapper">
-                <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            <div class="product-item__btn-wrapper">
+                <a class="btn product-item__btn" href="#">Быстрый просмотр</a>
             </div>
           </div>
 
@@ -476,8 +482,8 @@
             <h2 class="product-item__title">
               <a class="product-item__link link link--main" href="#">Сливочное с кусочками черного шоколада</a>
             </h2>
-            <div class="product-item__show-btn-wrapper">
-                <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            <div class="product-item__btn-wrapper">
+                <a class="btn product-item__btn" href="#">Быстрый просмотр</a>
             </div>
           </div>
 
@@ -494,8 +500,8 @@
             <h2 class="product-item__title">
               <a class="product-item__link link link--main" href="#">Сливочное с мятным сиропом</a>
             </h2>
-            <div class="product-item__show-btn-wrapper">
-                <a class="btn btn--product-item" href="#">Быстрый просмотр</a>
+            <div class="product-item__btn-wrapper">
+                <a class="btn product-item__btn" href="#">Быстрый просмотр</a>
             </div>
           </div>
         </div>
@@ -611,30 +617,6 @@
   </div>
 </footer>
 <!-- End Footer -->
-
-<!-- Modal feedback -->
-  <div class="modal-feedback">
-    <button class="modal-feedback__close modal-close"></button>
-    <p class="modal-feedback__caption">Мы обязательно вам ответим!</p>
-    <form class="modal-feedback__form" id="form-feedback" action="#" method="post">
-      <div class="modal-feedback__field">
-        <input class="modal-feedback__input" id="user-name-feedback" type="text" name="user-name-feedback" placeholder="Как вас зовут?">
-        <label class="modal-feedback__label" for="user-name-feedback">Как вас зовут?</label>
-      </div>
-      <div class="modal-feedback__field">
-        <input class="modal-feedback__input" id="email-feedback" type="email" name="email-feedback" placeholder="Ваша почта для ответа?">
-        <label class="modal-feedback__label" for="email-feedback">Ваша почта для ответа?</label>
-      </div>
-      <div class="modal-feedback__field">
-        <textarea class="modal-feedback__text" id="message-feedback" name="message-feedback" placeholder="Напишите что-нибудь..."></textarea>
-        <label class="modal-feedback__label" for="message-feedback">Напишите что-нибудь...</label>
-      </div>
-      <div class="modal-feedback__field">
-        <button class="btn btn--feedback" type="submit">Отправить</button>
-      </div>
-    </form>
-  </div>
-<!-- End Modal feedback -->
 
 <!-- SVG-sprite -->
 <svg style="display: none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
