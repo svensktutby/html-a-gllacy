@@ -340,24 +340,29 @@
     <!-- Contacts -->
     <section class="page-content__section contacts">
       <h2 class="visually-hidden">Контакты</h2>
-      <div class="contacts__map">
-        <img class="contacts__img" src="img/map.jpg" width="1200" height="430" alt="Адрес главного офиса и офлайн-магазина по улице Большая Конюшенная 19/8 в городе Санкт-Петербург">
+      <div class="container">
+        <div class="contacts__data-wrapper">
+          <div class="contacts__data">
+            <p class="contacts__text">
+              Адрес главного офиса
+              <br>
+              и офлайн-магазина:
+              <br>
+              <b class="contacts__address">ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+              <br>
+              Для заказов по телефону:
+              <br>
+              <b class="contacts__phone">8 812 450-25-25</b>
+              <br>
+              (с 10 до 20 ежедневно)
+            </p>
+            <a class="btn contacts__btn"  href="feedback.html">Форма обратной связи</a>
+          </div>
+        </div>
       </div>
-      <div class="contacts__data">
-        <p class="contacts__text">
-          Адрес главного офиса
-          <br>
-          и офлайн-магазина:
-          <br>
-          <b class="contacts__address">ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
-          <br>
-          Для заказов по телефону:
-          <br>
-          <b class="contacts__phone">8 812 450-25-25</b>
-          <br>
-          (с 10 до 20 ежедневно)
-        </p>
-        <a class="btn contacts__btn" id="btn-feedback" href="feedback.html">Форма обратной связи</a>
+      <div class="contacts__map-wrapper">
+        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2352.0046391232827!2d27.452055316549444!3d53.878345480094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbda934dc537a5%3A0x44cd2c2130a805e9!2svulica+Janko%C5%ADskaha+34%2C+Minsk!5e0!3m2!1sen!2sby!4v1545729682928" width="100%" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <img class="contacts__img" src="img/map.jpg" width="1200" height="430" alt="Адрес главного офиса и офлайн-магазина по улице Большая Конюшенная 19/8 в городе Санкт-Петербург">
       </div>
     </section>
     <!-- End Contacts -->
@@ -448,27 +453,27 @@
 
 <!-- Modal feedback -->
 <div class="modal-overlay"></div>
-  <div class="modal-feedback">
-    <button class="modal-feedback__close modal-close">Закрыть</button>
-    <p class="modal-feedback__caption">Мы обязательно вам ответим!</p>
-    <form class="modal-feedback__form" id="form-feedback" action="#" method="post">
-      <div class="modal-feedback__field">
-        <input class="modal-feedback__input" id="user-name-feedback" type="text" name="user-name-feedback" placeholder="Как вас зовут?">
-        <label class="modal-feedback__label" for="user-name-feedback">Как вас зовут?</label>
-      </div>
-      <div class="modal-feedback__field">
-        <input class="modal-feedback__input" id="email-feedback" type="email" name="email-feedback" placeholder="Ваша почта для ответа?">
-        <label class="modal-feedback__label" for="email-feedback">Ваша почта для ответа?</label>
-      </div>
-      <div class="modal-feedback__field">
-        <textarea class="modal-feedback__text" id="message-feedback" name="message-feedback" placeholder="Напишите что-нибудь..."></textarea>
-        <label class="modal-feedback__label" for="message-feedback">Напишите что-нибудь...</label>
-      </div>
-      <div class="modal-feedback__field modal-feedback__field--btn">
-        <button class="btn modal-feedback__btn" type="submit">Отправить</button>
-      </div>
-    </form>
-  </div>
+<div class="modal-feedback">
+  <button class="modal-feedback__close modal-close">Закрыть</button>
+  <p class="modal-feedback__caption">Мы обязательно вам ответим!</p>
+  <form class="modal-feedback__form" id="form-feedback" action="#" method="post">
+    <div class="modal-feedback__field">
+      <input class="modal-feedback__input" id="user-name-feedback" type="text" name="user-name-feedback" placeholder="Как вас зовут?">
+      <label class="modal-feedback__label" for="user-name-feedback">Как вас зовут?</label>
+    </div>
+    <div class="modal-feedback__field">
+      <input class="modal-feedback__input" id="email-feedback" type="email" name="email-feedback" placeholder="Ваша почта для ответа?">
+      <label class="modal-feedback__label" for="email-feedback">Ваша почта для ответа?</label>
+    </div>
+    <div class="modal-feedback__field">
+      <textarea class="modal-feedback__text" id="message-feedback" name="message-feedback" placeholder="Напишите что-нибудь..."></textarea>
+      <label class="modal-feedback__label" for="message-feedback">Напишите что-нибудь...</label>
+    </div>
+    <div class="modal-feedback__field modal-feedback__field--btn">
+      <button class="btn modal-feedback__btn" type="submit">Отправить</button>
+    </div>
+  </form>
+</div>
 <!-- End Modal feedback -->
 
 <!-- SVG-sprite -->
