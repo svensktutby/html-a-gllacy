@@ -427,6 +427,11 @@ img {
 
   text-align: center;
 }
+
+.promo-slider__item--current {
+  display: block;
+}
+
 .promo-slider__title {
   width: 670px;
   margin: 0 auto;
@@ -456,8 +461,8 @@ img {
 
 .promo-slider__control {
   display: inline-block;
-  width: 17px;
-  height: 17px;
+  width: 21px;
+  height: 21px;
   margin-right: 8px;
 
   vertical-align: top;
@@ -466,45 +471,23 @@ img {
   border: 2px solid #fff;
   border-radius: 50%;
   cursor: pointer;
+  outline: none;
 }
 
-#promo-slide-1:checked ~ .page-wrapper--index {
-  background-color: #849d8f;
-  background-image: url("../img/slider-bg-1.png");
+.promo-slider__control:last-child {
+  margin-right: 0;
 }
 
-#promo-slide-1:checked ~ .page-footer--index {
-  background-color: #849d8f;
-}
-
-#promo-slide-2:checked ~ .page-wrapper--index {
-  background-color: #8996a6;
-  background-image: url("../img/slider-bg-2.png");
-}
-
-#promo-slide-2:checked ~ .page-footer--index {
-  background-color: #8996a6;
-}
-
-#promo-slide-3:checked ~ .page-wrapper--index {
-  background-color: #9d8b84;
-  background-image: url("../img/slider-bg-3.png");
-}
-
-#promo-slide-3:checked ~ .page-footer--index {
-  background-color: #9d8b84;
-}
-
-#promo-slide-1:checked ~ .page-wrapper--index #slide-1,
-#promo-slide-2:checked ~ .page-wrapper--index #slide-2,
-#promo-slide-3:checked ~ .page-wrapper--index #slide-3 {
-  display: block; /* что бы показать слайд:checked */
-}
-
-#promo-slide-1:checked ~ .page-wrapper--index .promo-slider__control--first,
-#promo-slide-2:checked ~ .page-wrapper--index .promo-slider__control--second,
-#promo-slide-3:checked ~ .page-wrapper--index .promo-slider__control--third {
+.promo-slider__control--current {
   background-color: #fff;
+}
+
+.promo-slider__control:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.promo-slider__control:active {
+  background-color: rgba(255, 255, 255, 1.0);
 }
 
 /**************** Promo cards ***************/
@@ -1388,6 +1371,7 @@ img {
 
 .modal-overlay--show {
   display: block;
+
   animation: fadeout 0.5s;
 }
 

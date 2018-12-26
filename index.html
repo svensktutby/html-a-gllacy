@@ -9,11 +9,7 @@
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body class="no-js">
-<input class="promo-slider__toggle" id="promo-slide-1" type="radio" name="promo-slider-toggle" checked>
-<input class="promo-slider__toggle" id="promo-slide-2" type="radio" name="promo-slider-toggle">
-<input class="promo-slider__toggle" id="promo-slide-3" type="radio" name="promo-slider-toggle">
-<!-- Page wrapper -->
+<body class="page no-js">
 <div class="page-wrapper page-wrapper--index">
   <!-- Header -->
   <header class="page-header">
@@ -154,25 +150,25 @@
         <h2 class="visually-hidden">Промо акции</h2>
 
         <ul class="promo-slider__list">
-          <li class="promo-slider__item" id="slide-1">
+          <li class="promo-slider__item promo-slider__item--current">
             <h3 class="promo-slider__title">Крем-брюле и пломбир с малиновым джемом</h3>
             <a class="btn promo-slider__btn" href="#">Давайте оба!</a>
           </li>
 
-          <li class="promo-slider__item" id="slide-2">
+          <li class="promo-slider__item">
             <h3 class="promo-slider__title">Шоколадный пломбир и лимонный сорбет </h3>
             <a class="btn promo-slider__btn" href="#">Давайте оба!</a>
           </li>
 
-          <li class="promo-slider__item" id="slide-3">
+          <li class="promo-slider__item">
             <h3 class="promo-slider__title">Пломбир с помадкой и клубничный щербет</h3>
             <a class="btn promo-slider__btn" href="#">Давайте оба!</a>
           </li>
         </ul>
         <div class="promo-slider__controls">
-          <label class="promo-slider__control promo-slider__control--first" for="promo-slide-1">Первый</label>
-          <label class="promo-slider__control promo-slider__control--second" for="promo-slide-2">Второй</label>
-          <label class="promo-slider__control promo-slider__control--third" for="promo-slide-3">Третий</label>
+          <button class="promo-slider__control promo-slider__control--current" type="button">Первый</button>
+          <button class="promo-slider__control" type="button">Второй</button>
+          <button class="promo-slider__control" type="button">Третий</button>
         </div>
       </section>
       <!-- End Promo slider -->
