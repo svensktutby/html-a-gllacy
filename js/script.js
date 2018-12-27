@@ -1,6 +1,6 @@
 (function () {
   /**************** Promo slider ***************/
-  var page = document.querySelector('.page');
+  var page = document.querySelector('body');
   var bgPage = page.querySelector('.page-wrapper--index');
   var slides = document.querySelectorAll('.promo-slider__item');
   var btnSlides = document.querySelectorAll('.promo-slider__control');

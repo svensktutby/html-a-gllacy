@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body class="page no-js">
+<body>
 <!-- Page wrapper -->
 <div class="page-wrapper">
   <!-- Header -->
@@ -29,7 +29,7 @@
             <!-- Navigatiion list -->
             <ul class="main-nav__list">
               <li class="main-nav__item main-nav__item--current main-nav__item--has-child">
-                <a class="main-nav__link main-nav__link--popup link link--main" href="catalog.html">Каталог</a>
+                <a class="main-nav__link link link--main" href="catalog.html">Каталог</a>
                 <div class="main-nav__sub-list-wrapper">
                   <ul class="main-nav__sub-list">
                     <li class="main-nav__sub-title">Новинки</li>
@@ -65,97 +65,103 @@
           <div class="user-block">
             <!-- Search -->
             <div class="user-block__item search">
-              <a class="user-block__link user-block__link--search link" href="#">
-                <svg class="page-header__icon icon" width="17" height="17">
+              <a class="search__link user-block__link link" href="#">
+                <svg class="user-block__icon icon" width="17" height="17">
                   <use xlink:href="#icon-search"/>
                 </svg>
                 <span class="user-block__text visually-hidden">Поиск</span>
               </a>
-              <div class="user-block__popup">
-                <div class="search__form-wrapper">
-                  <form class="search__form" id="form-search" action="#" method="get">
-                    <div class="search__field">
-                      <label class="visually-hidden" for="input-search">Что ищем?</label>
-                      <input class="search__input" id="input-search" type="text" name="search" placeholder="Что ищем?">
-                    </div>
-                  </form>
-                </div>
+              <div class="search__popup user-block__popup">
+                <form class="search__form" id="form-search" action="#" method="get">
+                  <div class="field">
+                    <label class="field__label visually-hidden" for="input-search">Что ищем?</label>
+                    <input class="field__input field__input--small" id="input-search" type="text" name="search" placeholder="Что ищем?">
+                  </div>
+                </form>
               </div>
             </div>
             <!-- End Search -->
             <!-- Login -->
             <div class="user-block__item login">
-              <a class="user-block__link user-block__link--login link" href="#">
-                <svg class="user-block__icon icon" width="21" height="19">
+              <a class="login__link user-block__link link" href="#">
+                <svg class="login__icon user-block__icon icon" width="21" height="19">
                   <use xlink:href="#icon-login"/>
                 </svg>
                 <span class="user-block__text">Вход</span>
               </a>
-              <div class="user-block__popup">
-                <div class="login__form-wrapper">
-                  <form class="login__form" id="form-login" action="#" method="post">
-                    <div class="login__field">
-                      <label class="visually-hidden" for="email-login">Ваша электронная почта</label>
-                      <input class="login__input" id="email-login" type="email" name="email-login" placeholder="Электронная почта">
-                      <label class="visually-hidden" for="password-login">Ваш пароль</label>
-                      <input class="login__input" id="password-login" type="password" name="password-login" placeholder="Пароль">
+              <div class="login__popup user-block__popup">
+                <form class="login__form" id="form-login" action="#" method="post">
+                  <div class="field">
+                    <label class="field__label visually-hidden" for="email-login">Ваша электронная почта</label>
+                    <input class="login__input field__input field__input--small" id="email-login" type="email" name="email-login" placeholder="Электронная почта">
+                    <label class="field__label visually-hidden" for="password-login">Ваш пароль</label>
+                    <input class="login__input field__input field__input--small" id="password-login" type="password" name="password-login" placeholder="Пароль">
+                  </div>
+                  <div class="field field-login">
+                    <div class="field-login__col">
+                      <button class="btn btn--wide" type="submit">Войти</button>
                     </div>
-                    <div class="login__field field-login">
-                      <div class="field-login__col">
-                        <button class="btn login__btn" type="submit">Войти</button>
-                      </div>
-                      <div class="field-login__col">
-                        <a class="field-login__link link" href="#">Забыли пароль?</a>
-                        <a class="field-login__link link" href="#">Новая регистрация</a>
-                      </div>
+                    <div class="field-login__col">
+                      <a class="field-login__link link" href="#">Забыли пароль?</a>
+                      <a class="field-login__link link" href="#">Новая регистрация</a>
                     </div>
-                  </form>
-                </div>
+                  </div>
+                </form>
               </div>
             </div>
             <!-- End Login -->
             <!-- Cart -->
-            <div class="user-block__item cart">
-              <a class="user-block__link user-block__link--cart link" href="#">
-                <svg class="user-block__icon icon" width="21" height="20">
+            <div class="user-block__item cart cart--full">
+              <a class="cart__link user-block__link link" href="#">
+                <svg class="cart__icon user-block__icon icon" width="21" height="20">
                   <use xlink:href="#icon-cart"/>
                 </svg>
-                <span class="user-block__text">Пусто</span>
+                <svg class="cart__icon cart__icon--full user-block__icon icon" width="21" height="20">
+                  <use xlink:href="#icon-cart-full"/>
+                </svg>
+                <span class="user-block__text">
+                  <span class="cart__amount">2</span>
+                  <span class="cart__text">товара</span>
+                </span>
               </a>
-              <div class="user-block__popup">
-                <div class="cart__table-wrapper">
-                  <table class="cart__table table-cart">
-                    <tbody>
-                      <tr class="table-cart__row">
-                        <td class="table-cart__col table-cart__col--remove">
-                          <button type="button">Удалить из корзины</button>
-                        </td>
-                        <td class="table-cart__col table-cart__col--img">
-                          <img src="img/img-procuct-01.jpg" width="33" height="33" alt="Фото мороженого">
-                        </td>
-                        <td class="table-cart__col table-cart__col--descr">Пломбир с апельсиновым джемом</td>
-                        <td class="table-cart__col table-cart__col--price">1,5 кг х <span>200 руб.</span></td>
-                        <td class="table-cart__col table-cart__col--count">300 руб.</td>
-                      </tr>
-                      <tr class="table-cart__row">
-                        <td class="table-cart__col table-cart__col--remove">
-                          <button type="button">Удалить из корзины</button>
-                        </td>
-                        <td class="table-cart__col table-cart__col--img">
-                          <img src="img/img-procuct-01.jpg" width="33" height="33" alt="Фото мороженого">
-                        </td>
-                        <td class="table-cart__col table-cart__col--descr">Клубничный пломбир с присыпкой из белого шоколада</td>
-                        <td class="table-cart__col table-cart__col--price">1,5 кг х <span>300 руб.</span></td>
-                        <td class="table-cart__col table-cart__col--count">450 руб.</td>
-                      </tr>
-                      <tr class="table-cart__row">
-                        <td class="table-cart__col table-cart__col--total" colspan="5">Итого: 750 руб.</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <div class="cart__btn-wrapper">
-                    <button class="btn cart__btn" type="button">Оформить заказ</button>
-                  </div>
+              <div class="cart__popup user-block__popup">
+                <table class="cart__table cart-list">
+                  <tbody>
+                    <tr class="cart-list__item">
+                      <td class="cart-list__remove">
+                        <button class="cart-list__btn-remove" type="button">Удалить из корзины</button>
+                      </td>
+                      <td class="cart-list__img">
+                        <img src="img/img-procuct-01.jpg" width="33" height="33" alt="Фото мороженого">
+                      </td>
+                      <td class="cart-list__descr">Пломбир с апельсиновым джемом</td>
+                      <td class="cart-list__order">
+                        <span class="cart-list__amount">1,5 кг х</span>
+                        <span class="cart-list__price">200 руб.</span>
+                      </td>
+                      <td class="cart-list__count">300 руб.</td>
+                    </tr>
+                    <tr class="cart-list__item">
+                      <td class="cart-list__remove">
+                        <button class="cart-list__btn-remove" type="button">Удалить из корзины</button>
+                      </td>
+                      <td class="cart-list__img">
+                        <img src="img/img-procuct-03.jpg" width="33" height="33" alt="Фото мороженого">
+                      </td>
+                      <td class="cart-list__descr">Клубничный пломбир с присыпкой из белого шоколада</td>
+                      <td class="cart-list__order">
+                        <span class="cart-list__amount">1,5 кг х</span>
+                        <span class="cart-list__price">300 руб.</span>
+                      </td>
+                      <td class="cart-list__count">450 руб.</td>
+                    </tr>
+                    <tr class="cart-list__item">
+                      <td class="cart-list__total" colspan="5">Итого: 750 руб.</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="cart__btn-wrapper">
+                  <button class="btn btn--narrow" type="button">Оформить заказ</button>
                 </div>
               </div>
             </div>
@@ -202,7 +208,7 @@
           <form class="filters__form" id="form-filters" action="#" method="get">
             <fieldset class="filters__item sort-filter">
               <legend class="filters__caption">Сортировка:</legend>
-              <div class="filters__field filters__field--sort-filter">
+              <div class="filters__field sort-filter__field">
                 <select class="filters__select" name="select-filters" id="select-filters">
                   <option value="popular" selected>по популярности</option>
                   <option value="low-price">сначала недорогие</option>
@@ -215,8 +221,8 @@
 
             <fieldset class="filters__item price-filter">
               <legend class="filters__caption">Цена:
-                <span class="price-filter__price price-filter__price--min">100</span> руб.&nbsp;–&nbsp;
-                <span class="price-filter__price price-filter__price--max">500</span> руб.
+                <span class="price-filter__cost price-filter__cost--min">100</span> руб.&nbsp;–&nbsp;
+                <span class="price-filter__cost price-filter__cost--max">500</span> руб.
               </legend>
               <div class="filters__field">
                 <div class="price-filter__range-controls">
@@ -639,11 +645,7 @@
   </symbol>
 
   <symbol id="icon-cart-full" viewBox="0 0 21 20" preserveAspectRatio="xMidYMid">
-    <polygon fill="#E84D37" points="5.888,4.031 6.922,13 17.372,13 18.548,4.031 "/>
-    <circle fill="#343434" cx="6.984" cy="18" r="2"/>
-    <circle fill="#343434" cx="15.984" cy="18" r="2"/>
-    <path fill="#343434" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
-      L17.372,13z"/>
+    <polygon points="5.888,4.031 6.922,13 17.372,13 18.548,4.031 "/>
   </symbol>
 
   <symbol id="icon-hit" viewBox="0 0 61 61" preserveAspectRatio="xMidYMid" fill="#231F20">
