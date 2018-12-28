@@ -9,6 +9,8 @@ body {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-weight: 400; /* !needs change */
   font-size: 16px; /* !needs change */
   line-height: 1.375; /* !needs change (1.42 default - from Bootstrap)*/
@@ -188,7 +190,7 @@ img {
 /**************** Layout ***************/
 .page-wrapper {
   min-width: 940px;
-  min-height: 100%; /* для прибивания footer к низу страницы */
+  flex-grow: 1; /* для прибивания footer к низу страницы */
 }
 
 .page-wrapper--index {
@@ -197,13 +199,6 @@ img {
   background-position: top center;
 
   transition: background-image 0.5s;
-}
-
-.page-wrapper::after {
-  content: "";
-
-  display: block;
-  height: 100px; /* для прибивания footer к низу страницы (пустой элемент на высоту footer) */
 }
 
 /* class for centering page content */
@@ -1140,6 +1135,10 @@ img {
   display: block;
 }
 
+.contacts__map-wrapper {
+  min-height: 430px;
+}
+
 .contacts__img {
   display: block;
   margin: 0 auto;
@@ -1671,7 +1670,6 @@ img {
 
 /*=============== FOOTER ===============*/
 .page-footer {
-  margin-top: -100px;
   padding: 20px 0;
 }
 
