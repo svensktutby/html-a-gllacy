@@ -47,6 +47,7 @@
     slides[slideIndex].classList.add('promo-slider__item--current');
     btnSlides[slideIndex].classList.add('promo-slider__control--current');
     page.style.backgroundColor = colors[slideIndex];
+    page.style.transition = 'background-color 0.5s';
     bgPage.style.backgroundImage = 'url("./img/slider-bg-' + (slideIndex + 1) + '.png")';
   };
 
