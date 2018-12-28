@@ -62,9 +62,15 @@
     var userNameFeedback = formFeedback.querySelector('#user-name-feedback');
     var emailFeedback = formFeedback.querySelector('#email-feedback');
     var messageFeedback = formFeedback.querySelector('#message-feedback');
+    var storageName = localStorage.getItem('userNameFeedback');
+    var storageEmail = localStorage.getItem('emailFeedback');
 
     openFeedback.addEventListener('click', function (event) {
       openFeedbackWindow();
+    });
+
+    formFeedback.addEventListener('submit', function (event) {
+      fillFieldsForm();
     });
 
     closeFeedback.addEventListener('click', function (event) {
@@ -87,7 +93,22 @@
     if (!modalFeedback.classList.contains('modal-feedback--show') && !modalOverlay.classList.contains('modal-overlay--show')) {
       modalFeedback.classList.add('modal-feedback--show');
       modalOverlay.classList.add('modal-overlay--show');
-      userNameFeedback.focus();
+      if (storageName && !storageEmail) {
+        userNameFeedback.value = storageName;
+        emailFeedback.focus();
+      } else if (storageName && storageEmail) {
+        userNameFeedback.value = storageName;
+        emailFeedback.value = storageEmail;
+        messageFeedback.focus();
+      } else {
+        userNameFeedback.focus();
+      }
+    }
+  }
+  function fillFieldsForm() {
+    if (userNameFeedback.value || emailFeedback.value || messageFeedback.value) {
+      localStorage.setItem('userNameFeedback', userNameFeedback.value);
+      localStorage.setItem('emailFeedback', emailFeedback.value);
     }
   }
   function closeFeedbackWindow() {

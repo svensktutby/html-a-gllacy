@@ -11,7 +11,7 @@
 </head>
 <body>
 <!-- Page wrapper -->
-<div class="page-wrapper">
+<div class="page-wrapper page-wrapper--catalog">
   <!-- Header -->
   <header class="page-header">
     <div class="container">
@@ -185,7 +185,7 @@
     <div class="container">
       <!-- Breadcrumbs -->
       <div class="breadcrumbs">
-        <ul class="breadcrumbs__list" aria-label="Breadcrumb" role="navigation">
+        <ul class="breadcrumbs__list" aria-label="Breadcrumb">
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link link link--main" href="index.html">Главная</a>
           </li>
@@ -238,48 +238,70 @@
             <fieldset class="filters__item fat-filter">
               <legend class="filters__caption">Жирность:</legend>
               <div class="filters__field">
-                <input class="fat-filter__input" id="fat-zero" type="radio" name="fat" value="zero">
-                <label class="fat-filter__label" for="fat-zero">
-                  <span class="fat-filter__indicator">0%</span>
-                </label>
-                <input class="fat-filter__input" id="fat-under10" type="radio" name="fat" value="under10" checked disabled>
-                <label class="fat-filter__label" for="fat-under10">
-                  <span class="fat-filter__indicator">до 10%</span>
-                </label>
-                <input class="fat-filter__input" id="fat-under30" type="radio" name="fat" value="under30">
-                <label class="fat-filter__label" for="fat-under30">
-                  <span class="fat-filter__indicator">до 30%</span>
-                </label>
-                <input class="fat-filter__input" id="fat-over30" type="radio" name="fat" value="over30">
-                <label class="fat-filter__label" for="fat-over30">
-                  <span class="fat-filter__indicator">выше 30%</span>
-                </label>
+                <ul class="fat-filter__list">
+                  <li class="fat-filter__item">
+                    <input class="fat-filter__input" id="fat-zero" type="radio" name="fat" value="zero">
+                    <label class="fat-filter__label" for="fat-zero">
+                      <span class="fat-filter__indicator">0%</span>
+                    </label>
+                  </li>
+                  <li class="fat-filter__item">
+                    <input class="fat-filter__input" id="fat-under10" type="radio" name="fat" value="under10" checked disabled>
+                    <label class="fat-filter__label" for="fat-under10">
+                      <span class="fat-filter__indicator">до 10%</span>
+                    </label>
+                  </li>
+                  <li class="fat-filter__item">
+                    <input class="fat-filter__input" id="fat-under30" type="radio" name="fat" value="under30">
+                    <label class="fat-filter__label" for="fat-under30">
+                      <span class="fat-filter__indicator">до 30%</span>
+                    </label>
+                  </li>
+                  <li class="fat-filter__item">
+                    <input class="fat-filter__input" id="fat-over30" type="radio" name="fat" value="over30">
+                    <label class="fat-filter__label" for="fat-over30">
+                      <span class="fat-filter__indicator">выше 30%</span>
+                    </label>
+                  </li>
+                </ul>
               </div>
             </fieldset>
 
             <fieldset class="filters__item fillers-filter">
               <legend class="filters__caption">Наполнители:</legend>
               <div class="filters__field">
-                <input class="fillers-filter__input" id="fillers-chocolate" type="checkbox" name="chocolate" checked>
-                <label class="fillers-filter__label" for="fillers-chocolate">
-                  <span class="fillers-filter__indicator">шоколадные</span>
-                </label>
-                <input class="fillers-filter__input" id="fillers-sugar" type="checkbox" name="sugar" checked>
-                <label class="fillers-filter__label" for="fillers-sugar">
-                  <span class="fillers-filter__indicator">сахарные присыпки</span>
-                </label>
-                <input class="fillers-filter__input" id="fillers-fruit" type="checkbox" name="fruit" checked disabled>
-                <label class="fillers-filter__label" for="fillers-fruit">
-                  <span class="fillers-filter__indicator">фрукты</span>
-                </label>
-                <input class="fillers-filter__input" id="fillers-syrup" type="checkbox" name="syrup">
-                <label class="fillers-filter__label" for="fillers-syrup">
-                  <span class="fillers-filter__indicator">сиропы</span>
-                </label>
-                <input class="fillers-filter__input" id="fillers-jam" type="checkbox" name="jam">
-                <label class="fillers-filter__label" for="fillers-jam">
-                  <span class="fillers-filter__indicator">джемы</span>
-                </label>
+                <ul class="fillers-filter__list">
+                  <li class="fillers-filter__item">
+                    <input class="fillers-filter__input" id="fillers-chocolate" type="checkbox" name="chocolate" checked>
+                    <label class="fillers-filter__label" for="fillers-chocolate">
+                      <span class="fillers-filter__indicator">шоколадные</span>
+                    </label>
+                  </li>
+                  <li class="fillers-filter__item">
+                    <input class="fillers-filter__input" id="fillers-sugar" type="checkbox" name="sugar" checked>
+                    <label class="fillers-filter__label" for="fillers-sugar">
+                      <span class="fillers-filter__indicator">сахарные присыпки</span>
+                    </label>
+                  </li>
+                  <li class="fillers-filter__item">
+                    <input class="fillers-filter__input" id="fillers-fruit" type="checkbox" name="fruit" checked disabled>
+                    <label class="fillers-filter__label" for="fillers-fruit">
+                      <span class="fillers-filter__indicator">фрукты</span>
+                    </label>
+                  </li>
+                  <li class="fillers-filter__item">
+                    <input class="fillers-filter__input" id="fillers-syrup" type="checkbox" name="syrup">
+                    <label class="fillers-filter__label" for="fillers-syrup">
+                      <span class="fillers-filter__indicator">сиропы</span>
+                    </label>
+                  </li>
+                  <li class="fillers-filter__item">
+                    <input class="fillers-filter__input" id="fillers-jam" type="checkbox" name="jam">
+                    <label class="fillers-filter__label" for="fillers-jam">
+                      <span class="fillers-filter__indicator">джемы</span>
+                    </label>
+                  </li>
+                </ul>
               </div>
             </fieldset>
             
@@ -621,12 +643,12 @@
       <!-- End Extra navigation -->
       <!-- Copyright -->
       <div class="page-footer__col copyright">
-        <div class="copyright__img-wrapper" href="#" target="blank">
+        <div class="copyright__img-wrapper">
           <img class="copyright__img" src="img/logo-htmlacademy.svg" width="108" height="38" alt="Логотип HTML Academy">
         </div>
         <div class="copyright__text-wrapper">
           <p class="copyright__text">
-              Сделано в <a class="copyright__link link link--main" href="https://htmlacademy.ru">HTML Academy</a> &copy; 2018
+              Сделано в <a class="copyright__link link link--main" href="https://htmlacademy.ru" target="_blank">HTML Academy</a> &copy; 2018
           </p>
         </div>
       </div>
@@ -808,7 +830,6 @@
   </symbol>
 </svg>
 <!-- End SVG-sprite -->
-<script src="./js/script.js"></script>
 </body>
 </html>
 
