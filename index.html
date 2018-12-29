@@ -73,8 +73,8 @@
               <div class="search__popup user-block__popup">
                 <form class="search__form" id="form-search" action="#" method="get">
                   <div class="field">
-                    <label class="field__label visually-hidden" for="input-search">Что ищем?</label>
-                    <input class="field__input field__input--small" id="input-search" type="text" name="search" placeholder="Что ищем?">
+                    <input class="field__input field__input--small" id="input-search" type="text" name="search">
+                    <label class="field__label field__label--small" for="input-search">Что ищем?</label>
                   </div>
                 </form>
               </div>
@@ -91,10 +91,12 @@
               <div class="login__popup user-block__popup">
                 <form class="login__form" id="form-login" action="#" method="post">
                   <div class="field">
-                    <label class="field__label visually-hidden" for="email-login">Ваша электронная почта</label>
-                    <input class="login__input field__input field__input--small" id="email-login" type="email" name="email-login" placeholder="Электронная почта">
-                    <label class="field__label visually-hidden" for="password-login">Ваш пароль</label>
-                    <input class="login__input field__input field__input--small" id="password-login" type="password" name="password-login" placeholder="Пароль">
+                    <input class="login__input field__input field__input--small" id="email-login" type="email" name="email-login">
+                    <label class="field__label field__label--small" for="email-login">Ваша электронная почта</label>
+                  </div>
+                  <div class="field">
+                    <input class="login__input field__input field__input--small" id="password-login" type="password" name="password-login">
+                    <label class="field__label field__label--small" for="password-login">Ваш пароль</label>
                   </div>
                   <div class="field field-login">
                     <div class="field-login__col">
@@ -147,7 +149,7 @@
     <div class="container">
       <!-- Promo slider -->
       <section class="page-content__section promo-slider">
-        <h2 class="visually-hidden">Промо акции</h2>
+        <h2 class="visually-hidden">Образцы продукции</h2>
 
         <ul class="promo-slider__list">
           <li class="promo-slider__item promo-slider__item--current">
@@ -327,8 +329,8 @@
             <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
             <form class="subscribe__form" id="form-subscribe" action="#" method="post">
               <div class="subscribe__field field">
-                <label class="field__label visually-hidden" for="email-subscribe">Электронная почта</label>
-                <input class="subscribe__input field__input" id="email-subscribe" type="email" name="email-subscribe" placeholder="Электронная почта">
+                <input class="subscribe__input field__input" id="email-subscribe" type="email" name="email-subscribe">
+                <label class="field__label" for="email-subscribe">Электронная почта</label>
                 <button class="btn" type="submit">Отправить</button>
               </div>
             </form>
@@ -360,9 +362,13 @@
           </div>
         </div>
       </div>
-      <div class="contacts__map-wrapper">
-        <img class="contacts__img" src="img/map.jpg" width="1200" height="430" alt="Адрес главного офиса и офлайн-магазина по улице Большая Конюшенная 19/8 в городе Санкт-Петербург">
-        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2352.0046391232827!2d27.452055316549444!3d53.878345480094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbda934dc537a5%3A0x44cd2c2130a805e9!2svulica+Janko%C5%ADskaha+34%2C+Minsk!5e0!3m2!1sen!2sby!4v1545729682928" width="1200" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <div class="contacts__map">
+        <div class="contacts__img-map-wrapper">
+          <img class="contacts__img-map" src="img/map.jpg" width="1200" height="430" alt="Адрес главного офиса и офлайн-магазина по улице Большая Конюшенная 19/8 в городе Санкт-Петербург">
+        </div>
+        <div class="contacts__online-map-wrapper">
+          <iframe class="contacts__online-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2352.0046391232827!2d27.452055316549444!3d53.878345480094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbda934dc537a5%3A0x44cd2c2130a805e9!2svulica+Janko%C5%ADskaha+34%2C+Minsk!5e0!3m2!1sen!2sby!4v1545729682928" width="1200" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
       </div>
     </section>
     <!-- End Contacts -->
@@ -458,15 +464,15 @@
   <p class="modal-feedback__caption">Мы обязательно вам ответим!</p>
   <form class="modal-feedback__form" id="form-feedback" action="#" method="post">
     <div class="field">
-      <input class="modal-feedback__input field__input" id="user-name-feedback" type="text" name="user-name-feedback" placeholder="Как вас зовут?">
+      <input class="modal-feedback__input field__input" id="user-name-feedback" type="text" name="user-name-feedback">
       <label class="field__label" for="user-name-feedback">Как вас зовут?</label>
     </div>
     <div class="field">
-      <input class="modal-feedback__input field__input" id="email-feedback" type="email" name="email-feedback" placeholder="Ваша почта для ответа?">
+      <input class="modal-feedback__input field__input" id="email-feedback" type="email" name="email-feedback">
       <label class="field__label" for="email-feedback">Ваша почта для ответа?</label>
     </div>
     <div class="field">
-      <textarea class="modal-feedback__text field__text" id="message-feedback" name="message-feedback" placeholder="Напишите что-нибудь..."></textarea>
+      <textarea class="modal-feedback__text field__text" id="message-feedback" name="message-feedback"></textarea>
       <label class="field__label" for="message-feedback">Напишите что-нибудь...</label>
     </div>
     <div class="modal-feedback__btn-wrapper">
