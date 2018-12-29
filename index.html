@@ -28,12 +28,12 @@
             <!-- Navigatiion list -->
             <ul class="main-nav__list">
               <li class="main-nav__item main-nav__item--has-child">
-                <a class="main-nav__link link" href="catalog.html">Каталог</a>
+                <a class="main-nav__link link" href="#">Каталог</a>
                 <div class="main-nav__sub-list-wrapper">
                   <ul class="main-nav__sub-list">
                     <li class="main-nav__sub-title">Новинки</li>
                     <li class="main-nav__sub-item">
-                      <a class="main-nav__sub-link link" href="#">Сливочное</a>
+                      <a class="main-nav__sub-link link" href="catalog.html">Сливочное</a>
                     </li>
                     <li class="main-nav__sub-item">
                       <a class="main-nav__sub-link link" href="#">Щербеты</a>
@@ -73,7 +73,7 @@
               <div class="search__popup user-block__popup">
                 <form class="search__form" id="form-search" action="#" method="get">
                   <div class="field">
-                    <input class="field__input field__input--small" id="input-search" type="text" name="search">
+                    <input class="field__input field__input--small" id="input-search" type="text" name="search" required>
                     <label class="field__label field__label--small" for="input-search">Что ищем?</label>
                   </div>
                 </form>
@@ -91,11 +91,11 @@
               <div class="login__popup user-block__popup">
                 <form class="login__form" id="form-login" action="#" method="post">
                   <div class="field">
-                    <input class="login__input field__input field__input--small" id="email-login" type="email" name="email-login">
+                    <input class="login__input field__input field__input--small" id="email-login" type="text" name="email-login" required>
                     <label class="field__label field__label--small" for="email-login">Ваша электронная почта</label>
                   </div>
                   <div class="field">
-                    <input class="login__input field__input field__input--small" id="password-login" type="password" name="password-login">
+                    <input class="login__input field__input field__input--small" id="password-login" type="password" name="password-login" required>
                     <label class="field__label field__label--small" for="password-login">Ваш пароль</label>
                   </div>
                   <div class="field field-login">
@@ -178,19 +178,21 @@
       <section class="page-content__section promo-cards">
         <h2 class="visually-hidden">Промо акции</h2>
   
-        <div class="promo-cards__item promo-cards__item--raspberry">
-          <h3 class="promo-cards__title">Малинка даром!</h3>
-          <p class="promo-cards__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <div class="promo-cards__btn-wrapper">
-            <a class="btn btn--wide" href="#">Хочу варенье!</a>
+        <div class="promo-cards__list">
+          <div class="promo-cards__item promo-cards__item--raspberry">
+            <h3 class="promo-cards__title">Малинка даром!</h3>
+            <p class="promo-cards__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+            <div class="promo-cards__btn-wrapper">
+              <a class="btn btn--wide" href="#">Хочу варенье!</a>
+            </div>
           </div>
-        </div>
-  
-        <div class="promo-cards__item promo-cards__item--chocolate">
-          <h3 class="promo-cards__title">Шоколадки даром!</h3>
-          <p class="promo-cards__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <div class="promo-cards__btn-wrapper">
-            <a class="btn btn--wide" href="#">Хочу шоколадки!</a>
+    
+          <div class="promo-cards__item promo-cards__item--chocolate">
+            <h3 class="promo-cards__title">Шоколадки даром!</h3>
+            <p class="promo-cards__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+            <div class="promo-cards__btn-wrapper">
+              <a class="btn btn--wide" href="#">Хочу шоколадки!</a>
+            </div>
           </div>
         </div>
       </section>
@@ -317,23 +319,25 @@
       <section class="page-content__section blog-post-subscribe">
         <h2 class="visually-hidden">Последние новости и подписка на блог</h2>
   
-        <div class="blog-post-subscribe__item blog-post">
-          <p class="blog-post__caption">Новое в нашем блоге</p>
-          <h3 class="blog-post__title">
-            <a class="blog-post__link link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
-          </h3>
-        </div>
-  
-        <div class="blog-post-subscribe__item subscribe">
-          <div class="subscribe__inner">
-            <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-            <form class="subscribe__form" id="form-subscribe" action="#" method="post">
-              <div class="subscribe__field field">
-                <input class="subscribe__input field__input" id="email-subscribe" type="email" name="email-subscribe">
-                <label class="field__label" for="email-subscribe">Электронная почта</label>
-                <button class="btn" type="submit">Отправить</button>
-              </div>
-            </form>
+        <div class="blog-post-subscribe__list">
+          <div class="blog-post-subscribe__item blog-post">
+            <p class="blog-post__caption">Новое в нашем блоге</p>
+            <h3 class="blog-post__title">
+              <a class="blog-post__link link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+            </h3>
+          </div>
+    
+          <div class="blog-post-subscribe__item subscribe">
+            <div class="subscribe__inner">
+              <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+              <form class="subscribe__form" id="form-subscribe" action="#" method="post">
+                <div class="subscribe__field field">
+                  <input class="subscribe__input field__input" id="email-subscribe" type="text" name="email-subscribe" required>
+                  <label class="field__label" for="email-subscribe">Электронная почта</label>
+                  <button class="btn" type="submit">Отправить</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -447,7 +451,7 @@
         </div>
         <div class="copyright__text-wrapper">
           <p class="copyright__text">
-              Сделано в <a class="copyright__link link link--main" href="https://htmlacademy.ru" target="_blank">HTML Academy</a> &copy; 2018
+              Сделано в <a class="copyright__link link link--main" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML Academy</a> &copy; 2018
           </p>
         </div>
       </div>
@@ -464,15 +468,15 @@
   <p class="modal-feedback__caption">Мы обязательно вам ответим!</p>
   <form class="modal-feedback__form" id="form-feedback" action="#" method="post">
     <div class="field">
-      <input class="modal-feedback__input field__input" id="user-name-feedback" type="text" name="user-name-feedback">
+      <input class="modal-feedback__input field__input" id="user-name-feedback" type="text" name="user-name-feedback" required>
       <label class="field__label" for="user-name-feedback">Как вас зовут?</label>
     </div>
     <div class="field">
-      <input class="modal-feedback__input field__input" id="email-feedback" type="email" name="email-feedback">
+      <input class="modal-feedback__input field__input" id="email-feedback" type="text" name="email-feedback" required>
       <label class="field__label" for="email-feedback">Ваша почта для ответа?</label>
     </div>
     <div class="field">
-      <textarea class="modal-feedback__text field__text" id="message-feedback" name="message-feedback"></textarea>
+      <textarea class="modal-feedback__text field__text" id="message-feedback" name="message-feedback" required></textarea>
       <label class="field__label" for="message-feedback">Напишите что-нибудь...</label>
     </div>
     <div class="modal-feedback__btn-wrapper">
