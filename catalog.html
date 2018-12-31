@@ -217,6 +217,7 @@
                   <option value="high-price">сначала дорогие</option>
                   <option value="fat">по жирности</option>
                 </select>
+                <span class="sort-filter__icon"></span>
               </div>
             </fieldset>
 
@@ -229,8 +230,8 @@
                 <div class="price-filter__range-controls">
                   <div class="price-filter__range-scale">
                     <div class="price-filter__range-bar"></div>
-                    <div class="price-filter__toggle price-filter__toggle--min"></div>
-                    <div class="price-filter__toggle price-filter__toggle--max"></div>
+                    <button class="price-filter__toggle price-filter__toggle--min" type="button"><span class="visually-hidden">Меньше</span></button>
+                    <button class="price-filter__toggle price-filter__toggle--max" type="button"><span class="visually-hidden">Больше</span></button>
                   </div>
                 </div>
               </div>
@@ -247,13 +248,13 @@
                     </label>
                   </li>
                   <li class="fat-filter__item">
-                    <input class="fat-filter__input" id="fat-under10" type="radio" name="fat" value="under10" checked disabled>
+                    <input class="fat-filter__input" id="fat-under10" type="radio" name="fat" value="under10" disabled>
                     <label class="fat-filter__label" for="fat-under10">
                       <span class="fat-filter__indicator">до 10%</span>
                     </label>
                   </li>
                   <li class="fat-filter__item">
-                    <input class="fat-filter__input" id="fat-under30" type="radio" name="fat" value="under30">
+                    <input class="fat-filter__input" id="fat-under30" type="radio" name="fat" value="under30" checked>
                     <label class="fat-filter__label" for="fat-under30">
                       <span class="fat-filter__indicator">до 30%</span>
                     </label>
