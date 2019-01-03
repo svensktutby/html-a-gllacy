@@ -90,9 +90,9 @@
   
   function openFeedbackWindow() {
     event.preventDefault();
-    if (!modalFeedback.classList.contains('modal-feedback--show') && !modalOverlay.classList.contains('modal-overlay--show')) {
-      modalFeedback.classList.add('modal-feedback--show');
-      modalOverlay.classList.add('modal-overlay--show');
+    if (!modalFeedback.classList.contains('modal-feedback--shown') && !modalOverlay.classList.contains('modal-overlay--shown')) {
+      modalFeedback.classList.add('modal-feedback--shown');
+      modalOverlay.classList.add('modal-overlay--shown');
       if (storageName && !storageEmail) {
         userNameFeedback.value = storageName;
         emailFeedback.focus();
@@ -113,9 +113,9 @@
   }
   function closeFeedbackWindow() {
     event.preventDefault();
-    if (modalFeedback.classList.contains('modal-feedback--show') && modalOverlay.classList.contains('modal-overlay--show')) {
-      modalFeedback.classList.remove('modal-feedback--show');
-      modalOverlay.classList.remove('modal-overlay--show');
+    if (modalFeedback.classList.contains('modal-feedback--shown') && modalOverlay.classList.contains('modal-overlay--shown')) {
+      modalFeedback.classList.remove('modal-feedback--shown');
+      modalOverlay.classList.remove('modal-overlay--shown');
     }
   }
 })();
