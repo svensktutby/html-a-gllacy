@@ -5,153 +5,150 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Глэйси</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&amp;subset=cyrillic">
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 <!-- Page wrapper -->
 <div class="page-wrapper page-wrapper--index">
-  <!-- Page inner--top -->
-  <div class="page-inner page-inner--top">
-    <!-- Header -->
-    <header class="page-header">
-      <div class="container">
-        <div class="page-header__row">
-          <div class="page-header__col page-header__col--left">
-            <!-- Main navigation -->
-            <nav class="main-nav">
-              <!-- Logo -->
-              <div class="logo">
-                <a class="logo__link">
-                  <img class="logo__img" src="img/logo.svg" width="154" height="64" alt="Логотип магазина Gllacy">
-                </a>
+  <!-- Header -->
+  <div class="container">
+    <header class="page-header container__inner">
+      <div class="page-header__col page-header__col--left">
+        <!-- Main navigation -->
+        <nav class="main-nav">
+          <!-- Logo -->
+          <div class="logo">
+            <a class="logo__link">
+              <img class="logo__img" src="img/logo.svg" width="154" height="64" alt="Логотип магазина Gllacy">
+            </a>
+          </div>
+          <!-- End Logo -->
+          <!-- Navigatiion list -->
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--has-child">
+              <a class="main-nav__link link" href="#">Каталог</a>
+              <div class="main-nav__sub-list-wrapper">
+                <ul class="main-nav__sub-list">
+                  <li class="main-nav__sub-title">Новинки</li>
+                  <li class="main-nav__sub-item">
+                    <a class="main-nav__sub-link link" href="catalog.html">Сливочное</a>
+                  </li>
+                  <li class="main-nav__sub-item">
+                    <a class="main-nav__sub-link link" href="#">Щербеты</a>
+                  </li>
+                  <li class="main-nav__sub-item">
+                    <a class="main-nav__sub-link link" href="#">Фруктовый лёд</a>
+                  </li>
+                  <li class="main-nav__sub-item">
+                    <a class="main-nav__sub-link link" href="#">Мелорин</a>
+                  </li>
+                </ul>
               </div>
-              <!-- End Logo -->
-              <!-- Navigatiion list -->
-              <ul class="main-nav__list">
-                <li class="main-nav__item main-nav__item--has-child">
-                  <a class="main-nav__link link" href="#">Каталог</a>
-                  <div class="main-nav__sub-list-wrapper">
-                    <ul class="main-nav__sub-list">
-                      <li class="main-nav__sub-title">Новинки</li>
-                      <li class="main-nav__sub-item">
-                        <a class="main-nav__sub-link link" href="catalog.html">Сливочное</a>
-                      </li>
-                      <li class="main-nav__sub-item">
-                        <a class="main-nav__sub-link link" href="#">Щербеты</a>
-                      </li>
-                      <li class="main-nav__sub-item">
-                        <a class="main-nav__sub-link link" href="#">Фруктовый лёд</a>
-                      </li>
-                      <li class="main-nav__sub-item">
-                        <a class="main-nav__sub-link link" href="#">Мелорин</a>
-                      </li>
-                    </ul>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link link" href="#">Доставка&nbsp;и&nbsp;оплата</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link link" href="#">О&nbsp;Компании</a>
+            </li>
+          </ul>
+          <!-- End Navigatiion list -->
+        </nav>
+        <!-- End Main navigation -->
+      </div>
+
+      <div class="page-header__col page-header__col--right">
+        <!-- User block -->
+        <div class="user-block">
+          <!-- Search -->
+          <div class="user-block__item search">
+            <a class="search__link user-block__link link" href="#">
+              <svg class="user-block__icon icon" width="17" height="17">
+                <use xlink:href="#icon-search"/>
+              </svg>
+              <span class="user-block__text visually-hidden">Поиск</span>
+            </a>
+            <div class="search__popup user-block__popup">
+              <form class="search__form" id="form-search" action="#" method="get">
+                <div class="field">
+                  <input class="field__input field__input--small" id="input-search" type="text" name="search" required>
+                  <label class="field__label field__label--small" for="input-search">Что ищем?</label>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- End Search -->
+          <!-- Login -->
+          <div class="user-block__item login">
+            <a class="login__link user-block__link link" href="#">
+              <svg class="login__icon user-block__icon icon" width="21" height="19">
+                <use xlink:href="#icon-login"/>
+              </svg>
+              <span class="user-block__text">Вход</span>
+            </a>
+            <div class="login__popup user-block__popup">
+              <form class="login__form" id="form-login" action="#" method="post">
+                <div class="field">
+                  <input class="login__input field__input field__input--small" id="email-login" type="text" name="email-login" required>
+                  <label class="field__label field__label--small" for="email-login">Ваша электронная почта</label>
+                </div>
+                <div class="field">
+                  <input class="login__input field__input field__input--small" id="password-login" type="password" name="password-login" required>
+                  <label class="field__label field__label--small" for="password-login">Ваш пароль</label>
+                </div>
+                <div class="field field-login">
+                  <div class="field-login__col">
+                    <button class="btn btn--wide" type="submit">Войти</button>
                   </div>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link link" href="#">Доставка&nbsp;и&nbsp;оплата</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link link" href="#">О&nbsp;компании</a>
-                </li>
-              </ul>
-              <!-- End Navigatiion list -->
-            </nav>
-            <!-- End Main navigation -->
-          </div>
-    
-          <div class="page-header__col page-header__col--right">
-            <!-- User block -->
-            <div class="user-block">
-              <!-- Search -->
-              <div class="user-block__item search">
-                <a class="search__link user-block__link link" href="#">
-                  <svg class="user-block__icon icon" width="17" height="17">
-                    <use xlink:href="#icon-search"/>
-                  </svg>
-                  <span class="user-block__text visually-hidden">Поиск</span>
-                </a>
-                <div class="search__popup user-block__popup">
-                  <form class="search__form" id="form-search" action="#" method="get">
-                    <div class="field">
-                      <input class="field__input field__input--small" id="input-search" type="text" name="search" required>
-                      <label class="field__label field__label--small" for="input-search">Что ищем?</label>
-                    </div>
-                  </form>
+                  <div class="field-login__col">
+                    <a class="field-login__link link" href="#">Забыли пароль?</a>
+                    <a class="field-login__link link" href="#">Новая регистрация</a>
+                  </div>
                 </div>
-              </div>
-              <!-- End Search -->
-              <!-- Login -->
-              <div class="user-block__item login">
-                <a class="login__link user-block__link link" href="#">
-                  <svg class="login__icon user-block__icon icon" width="21" height="19">
-                    <use xlink:href="#icon-login"/>
-                  </svg>
-                  <span class="user-block__text">Вход</span>
-                </a>
-                <div class="login__popup user-block__popup">
-                  <form class="login__form" id="form-login" action="#" method="post">
-                    <div class="field">
-                      <input class="login__input field__input field__input--small" id="email-login" type="text" name="email-login" required>
-                      <label class="field__label field__label--small" for="email-login">Ваша электронная почта</label>
-                    </div>
-                    <div class="field">
-                      <input class="login__input field__input field__input--small" id="password-login" type="password" name="password-login" required>
-                      <label class="field__label field__label--small" for="password-login">Ваш пароль</label>
-                    </div>
-                    <div class="field field-login">
-                      <div class="field-login__col">
-                        <button class="btn btn--wide" type="submit">Войти</button>
-                      </div>
-                      <div class="field-login__col">
-                        <a class="field-login__link link" href="#">Забыли пароль?</a>
-                        <a class="field-login__link link" href="#">Новая регистрация</a>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <!-- End Login -->
-              <!-- Cart -->
-              <div class="user-block__item cart">
-                <a class="cart__link user-block__link link" href="#">
-                  <svg class="cart__icon user-block__icon icon" width="21" height="20">
-                    <use xlink:href="#icon-cart"/>
-                  </svg>
-                  <svg class="cart__icon cart__icon--full user-block__icon icon" width="21" height="20">
-                    <use xlink:href="#icon-cart-full"/>
-                  </svg>
-                  <span class="user-block__text">
-                    <span class="cart__amount"></span>
-                    <span class="cart__text">Пусто</span>
-                  </span>
-                </a>
-                <!-- <div class="cart__popup user-block__popup">
-                  
-                </div> -->
-              </div>
-              <!-- End Cart -->
+              </form>
             </div>
-            <!-- End User block -->
-            <!-- Schedule -->
-            <div class="schedule">
-              <p class="schedule__time">С 10 до 20, ежедневно</p>
-              <p class="schedule__phone">8 812 450-25-25</p>
-            </div>
-            <!-- End Schedule -->
           </div>
+          <!-- End Login -->
+          <!-- Cart -->
+          <div class="user-block__item cart">
+            <a class="cart__link user-block__link link" href="#">
+              <svg class="cart__icon user-block__icon icon" width="21" height="20">
+                <use xlink:href="#icon-cart"/>
+              </svg>
+              <svg class="cart__icon cart__icon--full user-block__icon icon" width="21" height="20">
+                <use xlink:href="#icon-cart-full"/>
+              </svg>
+              <span class="user-block__text">
+                <span class="cart__amount"></span>
+                <span class="cart__text">Пусто</span>
+              </span>
+            </a>
+            <!-- <div class="cart__popup user-block__popup">
+              
+            </div> -->
+          </div>
+          <!-- End Cart -->
         </div>
+        <!-- End User block -->
+        <!-- Schedule -->
+        <div class="schedule">
+          <p class="schedule__time">С 10 до 20, ежедневно</p>
+          <p class="schedule__phone">8 812 450-25-25</p>
+        </div>
+        <!-- End Schedule -->
       </div>
     </header>
-    <!-- End Header -->
-      
-    <!-- Page content -->
-    <main class="page-content">
-      <div class="container">
+  </div>
+  <!-- End Header -->
+    
+  <!-- Page content -->
+  <main class="page-content">
+    <div class="container">
+      <div class="container__inner">
         <!-- Promo slider -->
-        <section class="page-content__section promo-slider">
+        <section class="promo-slider">
           <h2 class="visually-hidden">Образцы продукции</h2>
   
           <ul class="promo-slider__list">
@@ -178,7 +175,7 @@
         </section>
         <!-- End Promo slider -->
         <!-- Promo cards -->
-        <section class="page-content__section promo-cards">
+        <section class="promo-cards">
           <h2 class="visually-hidden">Промо акции</h2>
     
           <div class="promo-cards__list">
@@ -201,7 +198,7 @@
         </section>
         <!-- End Promo cards -->
         <!-- Promo hits -->
-        <section class="page-content__section promo-hits">
+        <section class="promo-hits">
           <h2 class="visually-hidden">Наши лучшие предложения</h2>
     
           <div class="promo-hits__list">
@@ -284,7 +281,7 @@
         </section>
         <!-- End Promo hits -->
         <!-- Shop features -->
-        <section class="page-content__section shop-features">
+        <section class="shop-features">
           <h1 class="shop-features__title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h1>
     
           <div class="shop-features__list">
@@ -319,14 +316,14 @@
         </section>
         <!-- End Shop features -->
         <!-- Blog post and subscribe -->
-        <section class="page-content__section blog-post-subscribe">
+        <section class="blog-post-subscribe">
           <h2 class="visually-hidden">Последние новости и подписка на блог</h2>
     
           <div class="blog-post-subscribe__list">
             <div class="blog-post-subscribe__item blog-post">
               <p class="blog-post__caption">Новое в нашем блоге</p>
               <h3 class="blog-post__title">
-                <a class="blog-post__link link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+                <a class="blog-post__link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
               </h3>
             </div>
       
@@ -346,12 +343,12 @@
         </section>
         <!-- End Blog post and subscribe -->
       </div>
-    </main>
-    <!-- End Page content -->
+    </div>
     <!-- Contacts -->
-    <section class="page-content__section contacts">
-        <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts__data-wrapper">
+    <section class="contacts">
+      <h2 class="visually-hidden">Контакты</h2>
+      <div class="container">
+        <div class="contacts__data-wrapper container__inner">
           <div class="contacts__data">
             <p class="contacts__text">
               Адрес главного офиса
@@ -369,102 +366,98 @@
             <a class="btn btn-wide contacts__btn"  href="feedback.html">Форма обратной связи</a>
           </div>
         </div>
-        <div class="contacts__map">
-          <div class="contacts__img-map-wrapper">
-            <img class="contacts__img-map" src="img/map.jpg" width="1200" height="430" alt="Адрес главного офиса и офлайн-магазина по улице Большая Конюшенная 19/8 в городе Санкт-Петербург">
-          </div>
-          <div class="contacts__online-map-wrapper">
-            <iframe class="contacts__online-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2352.0046391232827!2d27.452055316549444!3d53.878345480094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbda934dc537a5%3A0x44cd2c2130a805e9!2svulica+Janko%C5%ADskaha+34%2C+Minsk!5e0!3m2!1sen!2sby!4v1545729682928" width="1200" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
+      </div>
+      <div class="contacts__map">
+        <div class="contacts__img-map-wrapper">
+          <img class="contacts__img-map" src="img/map.jpg" width="1200" height="430" alt="Адрес главного офиса и офлайн-магазина по улице Большая Конюшенная 19/8 в городе Санкт-Петербург">
         </div>
-      </section>
-      <!-- End Contacts -->
-  </div>
-  <!-- End Page inner--top -->
-  
-  <!-- Page inner--bottom -->
-  <div class="page-inner page-inner--bottom">
-    <!-- Footer -->
-    <footer class="page-footer">
-      <div class="container">
-        <div class="page-footer__inner">
-          <!-- Socials -->
-          <div class="page-footer__col socials">
-            <ul class="socials__list">
-              <li class="socials__item">
-                <a class="socials__link socials__link--tw link" href="#" target="blank">
-                  <svg class="socials__icon icon" width="32" height="32">
-                    <use xlink:href="#icon-twitter"/>
-                  </svg>
-                  <span class="visually-hidden">Твиттер</span>
-                </a>
-              </li>
-              <li class="socials__item">
-                <a class="socials__link socials__link--in link" href="#" target="blank">
-                  <svg class="socials__icon icon" width="32" height="32">
-                    <use xlink:href="#icon-instagram"/>
-                  </svg>
-                  <span class="visually-hidden">Инстаграм</span>
-                </a>
-              </li>
-              <li class="socials__item">
-                <a class="socials__link socials__link--fb link" href="#" target="blank">
-                  <svg class="socials__icon icon" width="32" height="32">
-                    <use xlink:href="#icon-facebook"/>
-                  </svg>
-                  <span class="visually-hidden">Фейсбук</span>
-                </a>
-              </li>
-              <li class="socials__item">
-                <a class="socials__link socials__link--vk link" href="#" target="blank">
-                  <svg class="socials__icon icon" width="32" height="32">
-                    <use xlink:href="#icon-vkontakte"/>
-                  </svg>
-                  <span class="visually-hidden">Вконтакте</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <!-- End Socials -->
-          <!-- Extra navigation -->
-          <div class="page-footer__col extra-nav">
-            <ul class="extra-nav__list">
-              <li class="extra-nav__item extra-nav__item--suppliers">
-                <svg class="extra-nav__icon icon" width="15" height="13">
-                  <use xlink:href="#icon-heart"/>
-                </svg>
-                <a class="extra-nav__link link link--main" href="#">Для поставщиков</a>
-              </li>
-              <li class="extra-nav__item">
-                <a class="extra-nav__link link link--main" href="#">Наши документы</a>
-              </li>
-              <li class="extra-nav__item">
-                <a class="extra-nav__link link link--main" href="#">О производстве</a>
-              </li>
-              <li class="extra-nav__item">
-                <a class="extra-nav__link link link--main" href="#">Экологические стандарты</a>
-              </li>
-            </ul>
-          </div>
-          <!-- End Extra navigation -->
-          <!-- Copyright -->
-          <div class="page-footer__col copyright">
-            <div class="copyright__img-wrapper">
-              <img class="copyright__img" src="img/logo-htmlacademy.svg" width="108" height="38" alt="Логотип HTML Academy">
-            </div>
-            <div class="copyright__text-wrapper">
-              <p class="copyright__text">
-                  Сделано в <a class="copyright__link link link--main" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML Academy</a> &copy; 2018
-              </p>
-            </div>
-          </div>
-          <!-- End Copyright -->
+        <div class="contacts__online-map-wrapper">
+          <iframe class="contacts__online-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2352.0046391232827!2d27.452055316549444!3d53.878345480094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbda934dc537a5%3A0x44cd2c2130a805e9!2svulica+Janko%C5%ADskaha+34%2C+Minsk!5e0!3m2!1sen!2sby!4v1545729682928" width="1200" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
       </div>
+    </section>
+    <!-- End Contacts -->
+  </main>
+  <!-- End Page content -->
+
+
+  <!-- Footer -->
+  <div class="container">
+    <footer class="page-footer container__inner">
+      <!-- Socials -->
+      <div class="page-footer__col socials">
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a class="socials__link socials__link--tw link" href="#" target="blank">
+              <svg class="socials__icon icon" width="32" height="32">
+                <use xlink:href="#icon-twitter"/>
+              </svg>
+              <span class="visually-hidden">Твиттер</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--in link" href="#" target="blank">
+              <svg class="socials__icon icon" width="32" height="32">
+                <use xlink:href="#icon-instagram"/>
+              </svg>
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--fb link" href="#" target="blank">
+              <svg class="socials__icon icon" width="32" height="32">
+                <use xlink:href="#icon-facebook"/>
+              </svg>
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--vk link" href="#" target="blank">
+              <svg class="socials__icon icon" width="32" height="32">
+                <use xlink:href="#icon-vkontakte"/>
+              </svg>
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- End Socials -->
+      <!-- Extra navigation -->
+      <div class="page-footer__col extra-nav">
+        <ul class="extra-nav__list">
+          <li class="extra-nav__item extra-nav__item--suppliers">
+            <svg class="extra-nav__icon icon" width="15" height="13">
+              <use xlink:href="#icon-heart"/>
+            </svg>
+            <a class="extra-nav__link link link--main" href="#">Для поставщиков</a>
+          </li>
+          <li class="extra-nav__item">
+            <a class="extra-nav__link link link--main" href="#">Наши документы</a>
+          </li>
+          <li class="extra-nav__item">
+            <a class="extra-nav__link link link--main" href="#">О производстве</a>
+          </li>
+          <li class="extra-nav__item">
+            <a class="extra-nav__link link link--main" href="#">Экологические стандарты</a>
+          </li>
+        </ul>
+      </div>
+      <!-- End Extra navigation -->
+      <!-- Copyright -->
+      <div class="page-footer__col copyright">
+        <div class="copyright__img-wrapper">
+          <img class="copyright__img" src="img/logo-htmlacademy.svg" width="108" height="38" alt="Логотип HTML Academy">
+        </div>
+        <div class="copyright__text-wrapper">
+          <p class="copyright__text">
+              Сделано в <a class="copyright__link link link--main" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML Academy</a> &copy; 2018
+          </p>
+        </div>
+      </div>
+      <!-- End Copyright -->
     </footer>
-    <!-- End Footer -->
   </div>
-  <!-- End Page inner--bottom -->
+  <!-- End Footer -->
 </div>
 <!-- End Page wrapper -->
 
