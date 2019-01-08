@@ -290,7 +290,6 @@ img {
   margin: 0 auto;
 }
 
-/* class for centering page content */
 .container__inner {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -397,7 +396,7 @@ img {
   padding: 0;
 }
 
-.main-nav__item--has-child {
+.main-nav__item--dropdown {
   position: relative;
 }
 
@@ -434,8 +433,8 @@ img {
   background-color: #d07058;
 }
 
-.main-nav__item--has-child:hover .main-nav__link,
-.main-nav__item--has-child:focus .main-nav__link,
+.main-nav__item--dropdown:hover .main-nav__link,
+.main-nav__item--dropdown:focus .main-nav__link,
 .main-nav__link:hover,
 .main-nav__link:focus {
   color: #000;
@@ -458,38 +457,12 @@ img {
   display: none;
 }
 
-.main-nav__sub-list-wrapper {
+.main-nav__sub-list {
   position: absolute;
   top: 33px;
   left: -7px;
   z-index: -1;
 
-  opacity: 0;
-
-  -webkit-transition: opacity 0.3s, top 0.3s;
-       -o-transition: opacity 0.3s, top 0.3s;
-          transition: opacity 0.3s, top 0.3s;
-}
-
-.main-nav__sub-list-wrapper::before {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-
-  display: block;
-  width: 100px;
-  height: 15px;
-}
-
-.main-nav__item--has-child:hover .main-nav__sub-list-wrapper {
-  top: 38px;
-  z-index: 1;
-
-  opacity: 1;
-}
-
-.main-nav__sub-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -500,7 +473,6 @@ img {
   min-width: 143px;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 
   list-style: none;
 
@@ -508,12 +480,35 @@ img {
   border-radius: 5px;
   -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
           box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  opacity: 0;
+
+  -webkit-transition: opacity 0.3s, top 0.3s;
+       -o-transition: opacity 0.3s, top 0.3s;
+          transition: opacity 0.3s, top 0.3s;
 
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   -ms-flex-wrap: wrap;
+}
+
+.main-nav__sub-list::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+
+  display: block;
+  width: 100px;
+  height: 15px;
+}
+
+.main-nav__item--dropdown:hover .main-nav__sub-list {
+  top: 38px;
+  z-index: 1;
+
+  opacity: 1;
 }
 
 .main-nav__sub-title,
@@ -544,6 +539,9 @@ img {
 
 .main-nav__sub-item:last-child .main-nav__sub-link {
   padding-bottom: 16px;
+
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .main-nav__sub-link:hover,
