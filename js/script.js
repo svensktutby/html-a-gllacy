@@ -30,10 +30,10 @@
       slideIndex = 0;
     }
     if (n < 0) {
-      slideIndex = slide.length - 1;
+      slideIndex = slides.length - 1;
     }
-    for (var i = 0; i < slides.length; i++) {
-      var slide = slides[i];
+    for (var j = 0; j < slides.length; j++) {
+      var slide = slides[j];
       if (slide.classList.contains('promo-slider__item--current')) {
         slide.classList.remove('promo-slider__item--current');
       }
@@ -54,11 +54,11 @@
   /**************** Modal contacts ***************/
   var openFeedback = document.querySelector('.contacts__btn');
   var modalFeedback = document.querySelector('.modal-feedback');
+  var formFeedback = modalFeedback.querySelector('.modal-feedback__form');
   var closeFeedback = modalFeedback.querySelector('.modal-close');
   var modalOverlay = document.querySelector('.modal-overlay');
 
   if (modalFeedback) {
-    var formFeedback = modalFeedback.querySelector('.modal-feedback__form');
     var userNameFeedback = formFeedback.querySelector('#user-name-feedback');
     var emailFeedback = formFeedback.querySelector('#email-feedback');
     var messageFeedback = formFeedback.querySelector('#message-feedback');
@@ -66,18 +66,21 @@
     var storageEmail = localStorage.getItem('emailFeedback');
 
     openFeedback.addEventListener('click', function (event) {
+      event.preventDefault();
       openFeedbackWindow();
     });
 
-    formFeedback.addEventListener('submit', function (event) {
+    formFeedback.addEventListener('submit', function () {
       fillFieldsForm();
+      errorFillForm();
     });
 
     closeFeedback.addEventListener('click', function (event) {
+      event.preventDefault();
       closeFeedbackWindow();
     });
 
-    modalOverlay.addEventListener('click', function (event) {
+    modalOverlay.addEventListener('click', function () {
       closeFeedbackWindow();
     });
 
@@ -86,10 +89,9 @@
         closeFeedbackWindow();
       }
     });
-  };
-  
+  }
+
   function openFeedbackWindow() {
-    event.preventDefault();
     if (!modalFeedback.classList.contains('modal-feedback--shown') && !modalOverlay.classList.contains('modal-overlay--shown')) {
       modalFeedback.classList.add('modal-feedback--shown');
       modalOverlay.classList.add('modal-overlay--shown');
@@ -105,6 +107,50 @@
       }
     }
   }
+
+  function fillFieldsForm() {
+    if (userNameFeedback.value || emailFeedback.value || messageFeedback.value) {
+      localStorage.setItem('userNameFeedback', userNameFeedback.value);
+      localStorage.setItem('emailFeedback', emailFeedback.value);
+    }
+  }
+
+  function errorFillForm () {
+    if(!userNameFeedback.value || !emailFeedback.value || !messageFeedback.value) {
+      event.preventDefault();
+      modalFeedback.classList.remove('modal-feedback--error');
+      modalFeedback.offsetWidth = modalFeedback.offsetWidth;
+      modalFeedback.classList.add('modal-feedback--error');
+    }
+  }
+
+  function closeFeedbackWindow() {
+    if (modalFeedback.classList.contains('modal-feedback--shown') && modalOverlay.classList.contains('modal-overlay--shown')) {
+      modalFeedback.classList.remove('modal-feedback--shown');
+      modalFeedback.classList.add('modal-feedback--hidden');
+      modalOverlay.classList.remove('modal-overlay--shown');
+      modalOverlay.classList.add('modal-overlay--hidden');
+      setTimeout(function () {
+        modalFeedback.classList.remove('modal-feedback--hidden');
+        modalOverlay.classList.remove('modal-overlay--hidden');
+      }, 450);
+    }
+  }
+
+  /*function openFeedbackWindow() {
+    event.preventDefault();
+    fadeIn(1);
+    if (storageName && !storageEmail) {
+      userNameFeedback.value = storageName;
+      emailFeedback.focus();
+    } else if (storageName && storageEmail) {
+      userNameFeedback.value = storageName;
+      emailFeedback.value = storageEmail;
+      messageFeedback.focus();
+    } else {
+      userNameFeedback.focus();
+    }
+  }
   function fillFieldsForm() {
     if (userNameFeedback.value || emailFeedback.value || messageFeedback.value) {
       localStorage.setItem('userNameFeedback', userNameFeedback.value);
@@ -113,9 +159,45 @@
   }
   function closeFeedbackWindow() {
     event.preventDefault();
-    if (modalFeedback.classList.contains('modal-feedback--shown') && modalOverlay.classList.contains('modal-overlay--shown')) {
-      modalFeedback.classList.remove('modal-feedback--shown');
-      modalOverlay.classList.remove('modal-overlay--shown');
+    fadeOut(0);
+  }
+
+  var tIn, tOut;
+
+  function fadeIn(x) {
+    modalFeedback.style.display = 'block';
+    modalOverlay.style.display = 'block';
+
+    var op = (modalOverlay.style.opacity) ? parseFloat(modalOverlay.style.opacity) : 0;
+
+    if (op < x) {
+      clearInterval(tOut);
+      op += 0.05;
+      modalOverlay.style.opacity = op;
+      modalFeedback.style.opacity = op;
+
+      tIn = setTimeout(function() {
+        fadeIn(x);
+      }, 50);
     }
   }
+
+  function fadeOut(x) {
+    var op = (modalOverlay.style.opacity) ? parseFloat(modalOverlay.style.opacity) : 0;
+
+    if (op > x) {
+      clearInterval(tIn);
+      op -= 0.05;
+      modalOverlay.style.opacity = op;
+      modalFeedback.style.opacity = op;
+
+      tOut = setTimeout(function() {
+        fadeOut(x);
+      }, 50);
+    }
+    if (modalOverlay.style.opacity == x) {
+      modalFeedback.style.display = 'none';
+      modalOverlay.style.display = 'none';
+    }
+  }*/
 })();
