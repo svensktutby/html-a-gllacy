@@ -1,4 +1,4 @@
-(function () {
+;(function () {
   /**************** Promo slider ***************/
   var page = document.querySelector('body');
   var bgPage = page.querySelector('.page-wrapper--index');
@@ -49,7 +49,7 @@
     page.style.backgroundColor = colors[slideIndex];
     page.style.transition = 'background-color 0.5s';
     bgPage.style.backgroundImage = 'url("./img/slider-bg-' + (slideIndex + 1) + '.png")';
-  };
+  }
 
   /**************** Modal contacts ***************/
   var openFeedback = document.querySelector('.contacts__btn');
@@ -200,4 +200,4 @@
       modalOverlay.style.display = 'none';
     }
   }*/
-})();
+}());

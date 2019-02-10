@@ -17,9 +17,6 @@ body {
   word-wrap: break-word;
 
   background-color: #849d8f;
-
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
 }
 
 /* что бы контентные картинки не вылезали за ширину родительского контейнера */
